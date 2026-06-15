@@ -1,0 +1,25 @@
+# ---- Never publish private/identifying data ----
+# Safety net so raw or private inputs are never committed by accident.
+data/_private_*
+data/*_raw_*.xlsx
+data/*_raw_*.parquet
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# ---- OS / editor ----
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# ---- Excel lock files ----
+~$*.xlsx
+
+# R history
+.Rhistory

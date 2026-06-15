@@ -39,7 +39,7 @@ from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 
-from src.config import PLAYER_SUMMARY_FILE, RESULTS_DIR
+from src.config import CLEAN_FILE, PLAYER_SUMMARY_FILE, RESULTS_DIR
 
 warnings.filterwarnings("ignore")
 
@@ -252,6 +252,17 @@ def run() -> None:
     n_teams = df["team_id"].nunique()
     pos_n = {p: int((df["position_group_primary"] == p).sum()) for p in POS_ORDER}
     print(f"Cohort: n={n_players} players, {n_teams} teams; per-position n = {pos_n}")
+
+    # Cohort descriptives reported in the Results (first paragraph). Computed from
+    # the cleaned match table restricted to the analysis cohort.
+    obs = pd.read_excel(CLEAN_FILE)
+    obs = obs[obs["player_id"].isin(df["player_id"])]
+    n_match_obs = len(obs)                                   # player-match observations
+    n_matches = obs.drop_duplicates(["team_id", "MD"]).shape[0] // 2   # distinct games (2 teams each)
+    mp, dur = df["matches_played"], df["playing_duration_mean"]
+    print(f"  {n_match_obs:,} player-match observations across {n_matches} matches")
+    print(f"  matches per player = {mp.mean():.1f} ± {mp.std(ddof=1):.1f}; "
+          f"playing duration = {dur.mean():.1f} ± {dur.std(ddof=1):.1f} min")
 
     cv_cols = [f"{raw}_cv" for raw in RAW_ORDER]
     df_long = df.melt(

@@ -1,25 +1,30 @@
-# ---- Never publish private/identifying data ----
-# Safety net so raw or private inputs are never committed by accident.
-data/_private_*
-data/*_raw_*.xlsx
-data/*_raw_*.parquet
+# ---- Private data: NEVER in git ----
+# Raw tracking data, saved games, identified feature tables and the
+# pseudonymisation keys all live in data/private/ on the data owner's machine.
+/data/private/
+
+# Safety net: identifying or raw files anywhere else
+*_identified*
+*crosswalk*
+*.dat
+*.parquet
+
+# Machine-specific paths
+config/paths.toml
 
 # ---- Python ----
+.venv/
+.venv.nosync/
 __pycache__/
 *.py[cod]
 *.egg-info/
-.venv/
-venv/
-.env
+.pytest_cache/
+.ipynb_checkpoints/
 
 # ---- OS / editor ----
 .DS_Store
-.ipynb_checkpoints/
 .vscode/
 .idea/
 
-# ---- Excel lock files ----
-~$*.xlsx
-
-# R history
-.Rhistory
+# ---- Office lock files ----
+~$*

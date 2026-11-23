@@ -1,0 +1,4 @@
+﻿Model,k,LogLik,σ²Player,σ²Resid,ICC,Δdf,"LRT χ², p (vs prior)"
+M1: CV% ~ Metric + (1|Player),19,-8992.2,10.00,34.96,0.222,—,—
+M2: M1 + Position main effect,23,-8990.1,10.00,34.96,0.222,4,"4.12, p = .391"
+M3: M2 + Metric × Position,95,-8834.9,10.16,31.94,0.241,72,"310.53, p < .001"

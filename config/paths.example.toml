@@ -1,0 +1,13 @@
+# Copy this file to config/paths.toml (gitignored) and set the paths for this machine.
+# Only needed for the tracking pipeline (scripts/1_tracking_pipeline), which uses
+# private data that is not shared. The analysis (scripts/2_analysis) needs nothing here.
+# A relative path is read from the repository folder.
+
+# Folder with the private data: match_list.csv, features_identified/, keys/
+PRIVATE_DIR = "data/private"
+
+# Raw tracking and event files: <stem>.dat, <stem> metadata.xml, <stem> f24.xml, <stem> f7.xml
+RAW_TRACKING_DIR = "data/private/raw_tracking"
+
+# One DataBallPy saved game per match (made by step 1)
+SAVED_GAMES_DIR = "data/private/saved_games_v3"

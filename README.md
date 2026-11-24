@@ -95,7 +95,6 @@ tables.
 │   ├── data_dictionary.md                 every column of the shared data
 │   └── tracking_pipeline.md               steps 1 to 3 in detail (raw data -> shared input)
 ├── config/paths.example.toml          only for the tracking pipeline (private data paths)
-├── CHANGELOG.md                       what changed between versions of this repository
 ├── requirements.txt                   exact package versions (pip)
 └── pyproject.toml, poetry.lock        the same for Poetry
 ```
@@ -193,9 +192,9 @@ versions are guaranteed to.
 
 ## 8. Versions of this repository
 
-Every change after submission (for example in response to reviewers) is
-listed in [`CHANGELOG.md`](CHANGELOG.md), and each submitted version is tagged in
-git (`git tag` lists them; `git checkout <tag>` gives that exact version).
+Each submitted version is tagged in git (`git tag` lists them; `git checkout
+<tag>` gives that exact version). Changes between versions are in the commit
+history (`git log`).
 
 ## 9. License and citation
 

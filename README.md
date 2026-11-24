@@ -2,11 +2,8 @@
 
 Code and data to reproduce every table and figure of the manuscript on
 **within-player, match-to-match variability (coefficient of variation, CV%)**
-of 19 physical-demand metrics from optical tracking data, and how that
+of 19 physical-match load metrics from optical tracking data, and how that
 variability differs between playing positions.
-
-> The manuscript is under review. This repository is shared so that reviewers
-> and readers can check and rerun the analysis.
 
 **In short:** install the packages, run two scripts, and the results in
 `results/manuscript/` are regenerated from the shared data in `data/shared/`.

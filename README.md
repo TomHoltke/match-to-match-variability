@@ -42,6 +42,10 @@ status` after step 3 should also list no changed files.
 Poetry users can replace step 2 with `poetry install` (same versions, from
 `poetry.lock`) and prefix the commands with `poetry run`.
 
+`ModuleNotFoundError: No module named 'match_variability'` means the environment
+is not active: run the `activate` line of step 2 again in each new terminal
+(the installation itself stays).
+
 ---
 
 ## 2. What reproduces what
@@ -55,6 +59,7 @@ Poetry users can replace step 2 with `poetry install` (same versions, from
 | **Table S2**: mixed-model fit and likelihood-ratio tests | `TableS2.csv` | `s05_manuscript_results.py` |
 | **Table S3**: Tukey contrasts per metric (the numbers in Figure 1) | `TableS3.csv` | `s05_manuscript_results.py` |
 | All of the above, formatted as in the manuscript | `Manuscript_tables_and_figure.docx` | `s05_manuscript_results.py` |
+| Full statistical output, unrounded: cohort, all descriptives (overall and per position), complete output of every mixed model, likelihood-ratio tests, all Tukey pairs, optimizer used and any warnings (also printed to the screen) | `Statistical_output.txt` | `s05_manuscript_results.py` |
 
 The CSV tables open in Excel and hold exactly the text shown in the manuscript
 tables.

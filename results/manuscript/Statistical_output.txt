@@ -1,0 +1,1246 @@
+FULL STATISTICAL OUTPUT: match-to-match variability (step 5)
+All numbers unrounded (6 significant digits) unless printed by statsmodels itself.
+Software: Python 3.12.12, numpy 2.3.5, pandas 2.3.3, scipy 1.18.1, statsmodels 0.15.0
+
+====================================================================================================
+1. COHORT
+====================================================================================================
+Players: 146   Teams: 18   Player-match observations: 3458   Matches: 280
+Players per position: CM = 35, CB = 33, FB = 31, AM = 32, CF = 15
+                                         n    mean      SD     min  median     max
+Matches played per player              146 23.6849 4.25036      17      24      33
+Mean playing duration per player (min) 146 91.0065 5.04314 75.2222 92.0002 97.8593
+
+====================================================================================================
+2a. DESCRIPTIVES: player-season mean (raw units), across players
+====================================================================================================
+              metric group   n    mean        SD     min  median     max
+              TD (m)   All 146 10667.1    769.19 8916.23 10673.8 12511.3
+              TD (m)    CM  35 11275.2   536.769 10273.3   11336 12511.3
+              TD (m)    CB  33 9874.43   434.405 8916.23 9819.92 10709.7
+              TD (m)    FB  31 10442.3   467.434  9484.9 10395.6   11195
+              TD (m)    AM  32 11132.2   632.981 9908.87   11057 12435.3
+              TD (m)    CF  15   10464    765.12  9043.2   10389 12035.7
+            HSRD (m)   All 146 702.245   177.315 332.445 693.552  1058.6
+            HSRD (m)    CM  35 720.345   138.689  454.75 712.361 995.592
+            HSRD (m)    CB  33 484.077   82.3153 332.445 512.851   620.5
+            HSRD (m)    FB  31 720.842   108.553 569.782 697.323 924.499
+            HSRD (m)    AM  32 867.175   137.827 538.582 893.183  1058.6
+            HSRD (m)    CF  15 749.692   133.239 483.974 762.429 1004.52
+             SpD (m)   All 146 190.341   82.9274 69.2829 175.289  468.72
+             SpD (m)    CM  35 147.109   47.8722  74.797 151.895 274.621
+             SpD (m)    CB  33 122.284    34.481 70.6825 123.678  199.18
+             SpD (m)    FB  31 254.807   72.1847  143.94 241.791  468.72
+             SpD (m)    AM  32 238.422   84.3921 69.2829 241.088 399.333
+             SpD (m)    CF  15 205.137   75.4659   88.39 197.845 331.019
+        Sp-count (n)   All 146 16.6306   6.05568 6.21522 16.0575 35.3815
+        Sp-count (n)    CM  35 13.9664   3.98065 7.96846 14.8275 22.6706
+        Sp-count (n)    CB  33 11.2461   2.64924 6.21522 11.4357 16.7908
+        Sp-count (n)    FB  31  20.482   4.75877 12.4352  19.372 34.3211
+        Sp-count (n)    AM  32 20.5458   6.20043 9.22381  20.821 35.3815
+        Sp-count (n)    CF  15 18.3814   5.86313 7.92294 18.4577    30.3
+         CoD-low (n)   All 146 14.2091    3.3941 6.43722 13.7969 24.2922
+         CoD-low (n)    CM  35 15.0133   3.20738  10.311 14.9129 20.8777
+         CoD-low (n)    CB  33 16.0254   3.28764   9.968 15.0557 24.2922
+         CoD-low (n)    FB  31 14.3648   3.04604 8.83333 13.4859 20.8735
+         CoD-low (n)    AM  32 12.0948   2.77833 6.43722 11.9471 16.8595
+         CoD-low (n)    CF  15 12.5258   3.15433 9.72586  11.835 22.7593
+         CoD-med (n)   All 146 98.3303   20.5973 57.5287 96.0644 164.162
+         CoD-med (n)    CM  35 112.549   22.0354 77.0341 114.342 164.162
+         CoD-med (n)    CB  33 97.8467      16.1  61.958 98.9404 129.533
+         CoD-med (n)    FB  31 93.4696   16.4949 65.6533   93.01 127.264
+         CoD-med (n)    AM  32  94.555   20.7003 57.5733  93.159 140.699
+         CoD-med (n)    CF  15  84.316   17.0041 57.5287 81.5707 131.949
+        CoD-high (n)   All 146 153.381   25.6425 86.1533 152.577 214.255
+        CoD-high (n)    CM  35 158.002   22.3274 110.532 154.745 208.277
+        CoD-high (n)    CB  33 159.433   23.5572 118.815 161.485 214.255
+        CoD-high (n)    FB  31 160.346   24.7831 117.237 160.104 195.871
+        CoD-high (n)    AM  32 144.863   27.1737 86.1533 143.795 196.884
+        CoD-high (n)    CF  15 133.058   22.8998 105.653  130.79 182.307
+       CoD-total (n)   All 146  265.92   46.7263 154.153   261.4  389.34
+       CoD-total (n)    CM  35 285.564    45.836 199.657 284.523  389.34
+       CoD-total (n)    CB  33 273.305   40.8716 201.198 277.456 348.629
+       CoD-total (n)    FB  31 268.181   41.9073 191.724 277.866 343.045
+       CoD-total (n)    AM  32 251.513   49.0081 154.153 246.826 351.774
+       CoD-total (n)    CF  15   229.9   40.5216 173.065 219.677 337.017
+       Acc-count (n)   All 146 299.169   47.1708  188.11 297.852 413.538
+       Acc-count (n)    CM  35  312.92    50.766 220.605 313.337 413.538
+       Acc-count (n)    CB  33 294.853     42.76  188.11 297.468 368.308
+       Acc-count (n)    FB  31 300.647   46.5915 211.106 299.766 393.297
+       Acc-count (n)    AM  32 296.677   48.7298 196.853 294.057 410.879
+       Acc-count (n)    CF  15 278.839   41.4635 219.925 279.006 392.013
+       Dec-count (n)   All 146 292.577   46.1379 192.584 287.351 410.873
+       Dec-count (n)    CM  35 312.899   45.7395 235.824 308.414 401.487
+       Dec-count (n)    CB  33 280.808   35.0788 209.244  278.13 348.345
+       Dec-count (n)    FB  31  298.96   47.5389 207.788 301.862 410.873
+       Dec-count (n)    AM  32 289.933   49.0511 192.584 290.225 368.291
+       Dec-count (n)    CF  15 263.497   40.1533 212.865 256.554 391.174
+        Acc-dist (m)   All 146 273.713   46.3382 154.799 271.738 391.359
+        Acc-dist (m)    CM  35 279.501   42.9881  195.41  280.67 378.498
+        Acc-dist (m)    CB  33 245.753   41.1599 154.799 251.419 322.015
+        Acc-dist (m)    FB  31 276.262   45.1754 194.739 263.684 355.821
+        Acc-dist (m)    AM  32 291.645   46.8802 194.859 291.371 391.359
+        Acc-dist (m)    CF  15 278.193   44.0671 200.458 288.002 368.722
+        Dec-dist (m)   All 146 316.671   52.9662 199.518 316.638 434.693
+        Dec-dist (m)    CM  35 333.505   45.4357 256.263 331.967 432.029
+        Dec-dist (m)    CB  33 274.427    34.709  201.69 277.035 343.829
+        Dec-dist (m)    FB  31 329.187   49.6769 235.377 329.072 434.693
+        Dec-dist (m)    AM  32 335.888   56.8871 199.518  342.19 426.706
+        Dec-dist (m)    CF  15 303.464   50.4212 209.469  299.22 424.219
+     Acc-avg (m·s⁻²)   All 146 4.68383   0.10268 4.44739 4.67999 5.01407
+     Acc-avg (m·s⁻²)    CM  35 4.66893 0.0732072 4.53333 4.67148  4.8175
+     Acc-avg (m·s⁻²)    CB  33 4.61517 0.0858291 4.44739 4.62682 4.77095
+     Acc-avg (m·s⁻²)    FB  31 4.71892 0.0984587  4.5124 4.73172 4.94958
+     Acc-avg (m·s⁻²)    AM  32 4.73217  0.115642 4.49778 4.72196 5.01407
+     Acc-avg (m·s⁻²)    CF  15 4.69401 0.0954777 4.51882 4.70765 4.82958
+     Dec-avg (m·s⁻²)   All 146 4.90589  0.117643 4.52176 4.90806 5.25815
+     Dec-avg (m·s⁻²)    CM  35 4.89356 0.0773603  4.7544 4.88042 5.05138
+     Dec-avg (m·s⁻²)    CB  33  4.8795 0.0938524 4.65435 4.86905  5.0612
+     Dec-avg (m·s⁻²)    FB  31 4.95948  0.111851  4.6832 4.96714 5.20792
+     Dec-avg (m·s⁻²)    AM  32 4.93106   0.15176 4.67833 4.92254 5.25815
+     Dec-avg (m·s⁻²)    CF  15 4.82828  0.120773 4.52176 4.86542 4.93708
+    Acc-peak (m·s⁻²)   All 146 9.83571 0.0764764    9.61 9.85205 9.96722
+    Acc-peak (m·s⁻²)    CM  35   9.842 0.0634007  9.6596 9.86226 9.94042
+    Acc-peak (m·s⁻²)    CB  33 9.81399 0.0753949 9.66308 9.82579 9.93571
+    Acc-peak (m·s⁻²)    FB  31 9.86364 0.0678206 9.69522  9.8905 9.94958
+    Acc-peak (m·s⁻²)    AM  32 9.83931 0.0825513 9.66588 9.84607 9.96722
+    Acc-peak (m·s⁻²)    CF  15 9.80339 0.0937401    9.61  9.8328 9.92235
+    Dec-peak (m·s⁻²)   All 146 9.90871 0.0487797 9.69941 9.92038    9.98
+    Dec-peak (m·s⁻²)    CM  35 9.91951 0.0463475 9.73241 9.92655 9.96706
+    Dec-peak (m·s⁻²)    CB  33 9.90266 0.0337716 9.81269 9.90667 9.96091
+    Dec-peak (m·s⁻²)    FB  31 9.93022 0.0329911  9.8316 9.93429    9.98
+    Dec-peak (m·s⁻²)    AM  32 9.90099  0.056852 9.75429 9.91997 9.97556
+    Dec-peak (m·s⁻²)    CF  15 9.86885 0.0639518 9.69941 9.89333 9.92833
+Mean sprint dist (m)   All 146 12.6924    1.3835   8.825 12.8639  15.872
+Mean sprint dist (m)    CM  35 12.0441   1.20916   8.825 11.9103 14.6273
+Mean sprint dist (m)    CB  33 12.0523   1.17982 9.33846 12.0739 14.4895
+Mean sprint dist (m)    FB  31 13.8819   1.13959 10.7381    13.7  15.872
+Mean sprint dist (m)    AM  32 12.9869   1.17534 9.75238 13.1029 15.5889
+Mean sprint dist (m)    CF  15 12.5265   1.36863 10.0667 12.2455 15.0294
+ Mean sprint dur (s)   All 146  1.6964  0.175453  1.1985 1.72173  2.0868
+ Mean sprint dur (s)    CM  35  1.6242  0.160286  1.1985 1.61966 1.95091
+ Mean sprint dur (s)    CB  33 1.60824  0.151718 1.27462 1.60478 1.91053
+ Mean sprint dur (s)    FB  31 1.84172    0.1465 1.42667 1.82667  2.0868
+ Mean sprint dur (s)    AM  32 1.73657  0.144263    1.34  1.7519 2.04278
+ Mean sprint dur (s)    CF  15  1.6728  0.171332 1.37083 1.62682 1.97588
+  Peak speed (m·s⁻¹)   All 146 10.5967  0.409123 9.53483 10.6379 11.3986
+  Peak speed (m·s⁻¹)    CM  35 10.2441  0.312206 9.53483 10.2612 10.9961
+  Peak speed (m·s⁻¹)    CB  33 10.8822  0.256922 10.1228 10.9417 11.3986
+  Peak speed (m·s⁻¹)    FB  31 10.9262  0.262471 10.1538 10.9738 11.2157
+  Peak speed (m·s⁻¹)    AM  32 10.3939  0.337749 9.68095 10.4973 11.0013
+  Peak speed (m·s⁻¹)    CF  15 10.5432  0.324573 10.0112   10.46 11.0129
+
+====================================================================================================
+2b. DESCRIPTIVES: within-player match-to-match CV%, across players
+====================================================================================================
+              metric group   n     mean       SD      min   median     max
+              TD (m)   All 146  4.55583 0.907856  2.65088  4.42343 7.43676
+              TD (m)    CM  35  4.32401 0.980223  2.65088  4.26855 6.81721
+              TD (m)    CB  33  4.60063  1.01223  3.05415  4.25506 6.49159
+              TD (m)    FB  31  4.51263 0.679112  3.48715  4.51516 6.03686
+              TD (m)    AM  32  4.65314 0.892625  2.85388  4.78753  6.2988
+              TD (m)    CF  15  4.87986 0.911602  3.83296  4.73254 7.43676
+            HSRD (m)   All 146  18.3817  4.02336   9.2678  18.4676 30.6732
+            HSRD (m)    CM  35  18.4981  3.67772   9.2678  18.8556 27.5548
+            HSRD (m)    CB  33   20.988  3.92658  14.8013  20.9092 30.6732
+            HSRD (m)    FB  31  18.3448  4.04915  10.0799  18.7263 26.4178
+            HSRD (m)    AM  32  15.6378  3.07206  9.57219  15.2339 22.9581
+            HSRD (m)    CF  15  18.3064  3.20503  11.8188  18.3382 23.2072
+             SpD (m)   All 146  39.1394  13.1823  17.5051  37.2614 134.234
+             SpD (m)    CM  35  43.4632  12.4466  24.8902  43.2419 88.6519
+             SpD (m)    CB  33  44.3627  8.76579  28.7499  43.5212 65.1392
+             SpD (m)    FB  31  32.0562    6.375  17.5051  32.4109 43.1513
+             SpD (m)    AM  32  36.8764   19.529  21.7689  33.3029 134.234
+             SpD (m)    CF  15   37.026  8.81557  21.5072  37.6633 53.4308
+        Sp-count (n)   All 146  35.3423  16.1001  15.7074  33.5707 175.614
+        Sp-count (n)    CM  35  38.8264  15.7752   22.523  34.7061 106.767
+        Sp-count (n)    CB  33  37.1231  7.66734  24.5236  35.8713 50.8347
+        Sp-count (n)    FB  31  30.9103  9.44106  15.7074  29.6645  49.013
+        Sp-count (n)    AM  32  34.3749  26.9983  17.4171   27.557 175.614
+        Sp-count (n)    CF  15  34.5178  7.53407   21.407  36.7984  45.389
+         CoD-low (n)   All 146  38.0053  8.63415  24.1022  36.8362 67.7693
+         CoD-low (n)    CM  35  35.9736  6.07656  24.6532  36.2643 46.3546
+         CoD-low (n)    CB  33  34.4328  6.85375  25.4538  33.7609 51.2312
+         CoD-low (n)    FB  31  36.5927  6.49533  24.1022  36.1648 53.8855
+         CoD-low (n)    AM  32  42.1609  11.3668  24.2115  39.7565 67.7693
+         CoD-low (n)    CF  15  44.6597  8.17479  27.6455  43.8258 59.9549
+         CoD-med (n)   All 146  18.4494  4.37623  10.0248  17.9045 35.2136
+         CoD-med (n)    CM  35  16.7052  2.76422  10.1523  16.8638 21.3975
+         CoD-med (n)    CB  33  18.0853  4.68847  10.2932  16.9615 30.7941
+         CoD-med (n)    FB  31  19.3292  3.88632  11.5398  18.8333 27.5696
+         CoD-med (n)    AM  32  19.1627  5.60808  10.0248   18.404 35.2136
+         CoD-med (n)    CF  15  19.9799  3.77397  13.3534  19.1116 28.4645
+        CoD-high (n)   All 146  13.7629  2.28996  9.73376  13.5771 20.1553
+        CoD-high (n)    CM  35  13.2312  1.92953  10.0856  13.0471 19.9167
+        CoD-high (n)    CB  33  13.8353  2.29455  9.73376  13.7935 17.6598
+        CoD-high (n)    FB  31  13.3893  2.23386  9.84601  13.4366 18.7388
+        CoD-high (n)    AM  32  14.0547   2.5474   9.9123  14.0074 20.1553
+        CoD-high (n)    CF  15  14.9943  2.30788  12.1336   14.433 19.0472
+       CoD-total (n)   All 146  14.0249  2.86617  8.92162  13.6588 25.9154
+       CoD-total (n)    CM  35  13.1864  1.82114  10.1579  12.9497 18.1579
+       CoD-total (n)    CB  33  14.0578  2.94071  8.92162  13.9847  20.714
+       CoD-total (n)    FB  31  13.8679  2.75236  9.61277  13.8052 18.6206
+       CoD-total (n)    AM  32  14.4334  3.50028  9.14843  13.6433 25.9154
+       CoD-total (n)    CF  15  15.3615  3.12877  10.0536  14.7434 21.7129
+       Acc-count (n)   All 146  17.0569  6.84877  7.35494  15.1139 49.1771
+       Acc-count (n)    CM  35  15.7711  5.30027  9.47648  14.8121 32.1535
+       Acc-count (n)    CB  33  16.1703  5.43696  8.74319  14.5677 33.2438
+       Acc-count (n)    FB  31  18.2193  7.79719  7.35494  15.3289  34.268
+       Acc-count (n)    AM  32   17.626  8.58666  9.82297  15.2875 49.1771
+       Acc-count (n)    CF  15  18.3915  6.69718  11.4618  16.1044 32.7986
+       Dec-count (n)   All 146  16.9279  6.99191  8.67756  14.7793 46.4154
+       Dec-count (n)    CM  35  15.5914  5.66403  8.67756  14.4423 35.5952
+       Dec-count (n)    CB  33  16.3134  5.61827  10.2978  15.0192 34.5289
+       Dec-count (n)    FB  31    17.81  7.37412  9.48623  15.3156 34.2392
+       Dec-count (n)    AM  32  17.5313  9.15285  9.22093  14.4518 46.4154
+       Dec-count (n)    CF  15  18.2879  6.65957  11.6131  16.1659 35.2656
+        Acc-dist (m)   All 146  17.5731  7.50589  8.02048  15.3357 55.6021
+        Acc-dist (m)    CM  35   16.892  7.18176  8.62421  15.1327 40.6635
+        Acc-dist (m)    CB  33  16.5138  5.78921  8.52388  15.4653 36.4109
+        Acc-dist (m)    FB  31  18.9946  8.25871  8.02048  16.0428 37.5552
+        Acc-dist (m)    AM  32  17.6212  9.00587  8.81373  15.2464 55.6021
+        Acc-dist (m)    CF  15  18.4529  6.83938  11.1636  17.2336 32.0814
+        Dec-dist (m)   All 146  15.9406  6.34535  6.76838  13.7697 46.6708
+        Dec-dist (m)    CM  35  15.2925  6.42663  6.76838   13.767 39.8935
+        Dec-dist (m)    CB  33  15.1946  4.90844  9.94766  13.5933 32.6222
+        Dec-dist (m)    FB  31  16.7063  6.08149  8.50721  14.1525 29.3635
+        Dec-dist (m)    AM  32   16.177  8.02697  7.99309  13.5109 46.6708
+        Dec-dist (m)    CF  15  17.0069  5.89167  11.0368  14.9992 29.7379
+     Acc-avg (m·s⁻²)   All 146  2.94503  1.23759  1.57367  2.56171 7.97394
+     Acc-avg (m·s⁻²)    CM  35    2.894  1.34818  1.75637  2.47367 7.97394
+     Acc-avg (m·s⁻²)    CB  33  2.79713 0.938066  1.57367  2.58271 6.24918
+     Acc-avg (m·s⁻²)    FB  31   3.1527  1.44501   1.8799  2.60168 6.67843
+     Acc-avg (m·s⁻²)    AM  32  2.90178  1.25347  1.74018  2.58843 7.18087
+     Acc-avg (m·s⁻²)    CF  15  3.05256   1.1463  1.84766  2.63728 6.24627
+     Dec-avg (m·s⁻²)   All 146  2.85578 0.908981  1.52355  2.63499 6.30238
+     Dec-avg (m·s⁻²)    CM  35  2.66794 0.959554  1.52355  2.45368  5.9692
+     Dec-avg (m·s⁻²)    CB  33  2.63223 0.697067  1.73529  2.46195 5.49158
+     Dec-avg (m·s⁻²)    FB  31  3.04182 0.958332  1.88553  2.84374 6.17348
+     Dec-avg (m·s⁻²)    AM  32  2.99419  0.97673  2.01414  2.76115 6.30238
+     Dec-avg (m·s⁻²)    CF  15  3.10615 0.858363    2.222  2.82549 5.34843
+    Acc-peak (m·s⁻²)   All 146  1.98378  1.00257 0.370323  1.72366 4.93184
+    Acc-peak (m·s⁻²)    CM  35  1.91992 0.841215 0.700424  1.63879 3.90449
+    Acc-peak (m·s⁻²)    CB  33   2.2288 0.958909 0.604361  2.13399  4.6549
+    Acc-peak (m·s⁻²)    FB  31   1.7006 0.962673 0.615002  1.37292 4.57444
+    Acc-peak (m·s⁻²)    AM  32  1.84635  1.04222 0.370323   1.6659 4.01068
+    Acc-peak (m·s⁻²)    CF  15  2.47214  1.25343 0.986317  1.78844 4.93184
+    Dec-peak (m·s⁻²)   All 146  1.07129 0.729448 0.202567 0.865849 4.09962
+    Dec-peak (m·s⁻²)    CM  35 0.934239 0.597171 0.320086 0.786955 2.99181
+    Dec-peak (m·s⁻²)    CB  33  1.14266 0.672691 0.376043  1.07273 3.54497
+    Dec-peak (m·s⁻²)    FB  31 0.779901 0.456712 0.202567 0.697863 2.09885
+    Dec-peak (m·s⁻²)    AM  32  1.16871 0.857853 0.253187 0.838706 3.67278
+    Dec-peak (m·s⁻²)    CF  15  1.62842  0.96586 0.742914  1.31002 4.09962
+Mean sprint dist (m)   All 146  23.3082  7.04056  8.01259  22.2291  46.068
+Mean sprint dist (m)    CM  35  24.4317  6.63326  14.8813  24.8123 36.9662
+Mean sprint dist (m)    CB  33  28.5109  6.36788   15.265  27.7858  46.068
+Mean sprint dist (m)    FB  31  19.1523  4.41113  8.01259  19.0363 28.5997
+Mean sprint dist (m)    AM  32  21.1946   7.1815  10.1065  20.0788 45.7968
+Mean sprint dist (m)    CF  15   22.339  6.44527  13.0334  20.6502 40.5369
+ Mean sprint dur (s)   All 146  22.5545  6.86566  8.01606  21.5811 45.3625
+ Mean sprint dur (s)    CM  35  23.6984  6.36588  14.4904  23.8339 35.4184
+ Mean sprint dur (s)    CB  33  27.6088  6.27889   14.452  26.8165 44.0561
+ Mean sprint dur (s)    FB  31  18.5433  4.31134  8.01606  18.4881 27.5697
+ Mean sprint dur (s)    AM  32  20.4839  7.10412  9.64586  19.0945 45.3625
+ Mean sprint dur (s)    CF  15  21.4728  6.15858  12.7796  19.4086 38.9301
+  Peak speed (m·s⁻¹)   All 146  9.57225   2.0325  3.46479  9.47558 15.9249
+  Peak speed (m·s⁻¹)    CM  35  11.1995  1.26865  8.53816  11.4125 13.8222
+  Peak speed (m·s⁻¹)    CB  33  8.18048  1.57606  3.46479  8.23289 12.3598
+  Peak speed (m·s⁻¹)    FB  31  8.03096  1.36411  4.81978  7.92742 11.3608
+  Peak speed (m·s⁻¹)    AM  32   10.544  1.92851  7.49102  10.2324 15.9249
+  Peak speed (m·s⁻¹)    CF  15  9.94951  1.48993  6.81015  10.1439 13.2305
+
+====================================================================================================
+3. LINEAR MIXED-EFFECTS MODELS (statsmodels MixedLM, random intercept per player)
+====================================================================================================
+Reference levels: metric = TD (total_distance_per_90), position = CM.
+REML fits give the estimates, variance components and ICC (Table 1, Table S2);
+ML fits give the log-likelihoods for the likelihood-ratio tests (Table S2).
+Warnings are recorded over the whole optimisation, including intermediate trial
+values; 'Converged' and all estimates refer to the final solution.
+
+----------------------------------------------------------------------------------------------------
+M1 (REML)   formula: cv_percent ~ C(metric_raw)
+----------------------------------------------------------------------------------------------------
+Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
+Log-likelihood: -8987.41
+Variance player (random intercept): 10.0026   Residual variance: 34.9596   ICC: 0.222467
+Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                            Mixed Linear Model Regression Results
+==============================================================================================
+Model:                          MixedLM             Dependent Variable:             cv_percent
+No. Observations:               2774                Method:                         REML      
+No. Groups:                     146                 Scale:                          34.9596   
+Min. group size:                19                  Log-Likelihood:                 -8987.4115
+Max. group size:                19                  Converged:                      Yes       
+Mean group size:                19.0                                                          
+----------------------------------------------------------------------------------------------
+                                                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------------------------
+Intercept                                            4.556    0.555  8.210 0.000  3.468  5.643
+C(metric_raw)[T.high_speed_running_distance_per_90] 13.826    0.692 19.979 0.000 12.470 15.182
+C(metric_raw)[T.sprinting_distance_per_90]          34.584    0.692 49.975 0.000 33.227 35.940
+C(metric_raw)[T.n_sprints_per_90]                   30.786    0.692 44.487 0.000 29.430 32.143
+C(metric_raw)[T.CoD_low_per_90]                     33.450    0.692 48.336 0.000 32.093 34.806
+C(metric_raw)[T.CoD_medium_per_90]                  13.894    0.692 20.077 0.000 12.537 15.250
+C(metric_raw)[T.CoD_high_per_90]                     9.207    0.692 13.305 0.000  7.851 10.563
+C(metric_raw)[T.CoD_total_per_90]                    9.469    0.692 13.683 0.000  8.113 10.825
+C(metric_raw)[T.n_acc_3_per_90]                     12.501    0.692 18.065 0.000 11.145 13.857
+C(metric_raw)[T.n_dec_3_per_90]                     12.372    0.692 17.878 0.000 11.016 13.728
+C(metric_raw)[T.dist_acc_3_m_per_90]                13.017    0.692 18.810 0.000 11.661 14.374
+C(metric_raw)[T.dist_dec_3_m_per_90]                11.385    0.692 16.451 0.000 10.028 12.741
+C(metric_raw)[T.mean_acc_magnitude_ms2]             -1.611    0.692 -2.328 0.020 -2.967 -0.254
+C(metric_raw)[T.mean_dec_magnitude_ms2]             -1.700    0.692 -2.457 0.014 -3.056 -0.344
+C(metric_raw)[T.peak_acc_ms2]                       -2.572    0.692 -3.717 0.000 -3.928 -1.216
+C(metric_raw)[T.peak_dec_ms2]                       -3.485    0.692 -5.035 0.000 -4.841 -2.128
+C(metric_raw)[T.mean_sprint_dist_m]                 18.752    0.692 27.098 0.000 17.396 20.109
+C(metric_raw)[T.mean_sprint_duration_s]             17.999    0.692 26.009 0.000 16.642 19.355
+C(metric_raw)[T.peak_speed_ms]                       5.016    0.692  7.249 0.000  3.660  6.373
+Group Var                                           10.003    0.242                           
+==============================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                     estimate       SE        z            p  lower_95  upper_95
+Intercept                                             4.55583 0.554942  8.20956  2.21992e-16   3.46816   5.64349
+C(metric_raw)[T.high_speed_running_distance_per_90]   13.8259 0.692025  19.9789  8.40607e-89   12.4695   15.1822
+C(metric_raw)[T.sprinting_distance_per_90]            34.5836 0.692025  49.9745            0   33.2273     35.94
+C(metric_raw)[T.n_sprints_per_90]                     30.7864 0.692025  44.4874            0   29.4301   32.1428
+C(metric_raw)[T.CoD_low_per_90]                       33.4495 0.692025  48.3357            0   32.0932   34.8058
+C(metric_raw)[T.CoD_medium_per_90]                    13.8935 0.692025  20.0766  1.18116e-89   12.5372   15.2499
+C(metric_raw)[T.CoD_high_per_90]                      9.20709 0.692025  13.3046  2.17765e-40   7.85074   10.5634
+C(metric_raw)[T.CoD_total_per_90]                     9.46903 0.692025  13.6831  1.28146e-42   8.11269   10.8254
+C(metric_raw)[T.n_acc_3_per_90]                       12.5011 0.692025  18.0645  6.06488e-73   11.1448   13.8574
+C(metric_raw)[T.n_dec_3_per_90]                       12.3721 0.692025  17.8781  1.74844e-71   11.0157   13.7284
+C(metric_raw)[T.dist_acc_3_m_per_90]                  13.0173 0.692025  18.8105  6.19749e-79    11.661   14.3737
+C(metric_raw)[T.dist_dec_3_m_per_90]                  11.3847 0.692025  16.4513  8.20436e-61   10.0284   12.7411
+C(metric_raw)[T.mean_acc_magnitude_ms2]               -1.6108 0.692025 -2.32766    0.0199302  -2.96714 -0.254455
+C(metric_raw)[T.mean_dec_magnitude_ms2]              -1.70005 0.692025 -2.45663    0.0140248  -3.05639 -0.343703
+C(metric_raw)[T.peak_acc_ms2]                        -2.57205 0.692025  -3.7167  0.000201839   -3.9284  -1.21571
+C(metric_raw)[T.peak_dec_ms2]                        -3.48454 0.692025 -5.03528  4.77142e-07  -4.84089   -2.1282
+C(metric_raw)[T.mean_sprint_dist_m]                   18.7524 0.692025  27.0979  1.0436e-161    17.396   20.1087
+C(metric_raw)[T.mean_sprint_duration_s]               17.9986 0.692025  26.0087 3.95111e-149   16.6423    19.355
+C(metric_raw)[T.peak_speed_ms]                        5.01642 0.692025   7.2489  4.20177e-13   3.66007   6.37276
+
+----------------------------------------------------------------------------------------------------
+M2 (REML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
+----------------------------------------------------------------------------------------------------
+Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
+Log-likelihood: -8982.62
+Variance player (random intercept): 10.0001   Residual variance: 34.9596   ICC: 0.222423
+Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                            Mixed Linear Model Regression Results
+==============================================================================================
+Model:                          MixedLM             Dependent Variable:             cv_percent
+No. Observations:               2774                Method:                         REML      
+No. Groups:                     146                 Scale:                          34.9596   
+Min. group size:                19                  Log-Likelihood:                 -8982.6153
+Max. group size:                19                  Converged:                      Yes       
+Mean group size:                19.0                                                          
+----------------------------------------------------------------------------------------------
+                                                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------------------------
+Intercept                                            4.664    0.752  6.204 0.000  3.190  6.137
+C(metric_raw)[T.high_speed_running_distance_per_90] 13.826    0.692 19.979 0.000 12.470 15.182
+C(metric_raw)[T.sprinting_distance_per_90]          34.584    0.692 49.975 0.000 33.227 35.940
+C(metric_raw)[T.n_sprints_per_90]                   30.786    0.692 44.487 0.000 29.430 32.143
+C(metric_raw)[T.CoD_low_per_90]                     33.450    0.692 48.336 0.000 32.093 34.806
+C(metric_raw)[T.CoD_medium_per_90]                  13.894    0.692 20.077 0.000 12.537 15.250
+C(metric_raw)[T.CoD_high_per_90]                     9.207    0.692 13.305 0.000  7.851 10.563
+C(metric_raw)[T.CoD_total_per_90]                    9.469    0.692 13.683 0.000  8.113 10.825
+C(metric_raw)[T.n_acc_3_per_90]                     12.501    0.692 18.065 0.000 11.145 13.857
+C(metric_raw)[T.n_dec_3_per_90]                     12.372    0.692 17.878 0.000 11.016 13.728
+C(metric_raw)[T.dist_acc_3_m_per_90]                13.017    0.692 18.810 0.000 11.661 14.374
+C(metric_raw)[T.dist_dec_3_m_per_90]                11.385    0.692 16.451 0.000 10.028 12.741
+C(metric_raw)[T.mean_acc_magnitude_ms2]             -1.611    0.692 -2.328 0.020 -2.967 -0.254
+C(metric_raw)[T.mean_dec_magnitude_ms2]             -1.700    0.692 -2.457 0.014 -3.056 -0.344
+C(metric_raw)[T.peak_acc_ms2]                       -2.572    0.692 -3.717 0.000 -3.928 -1.216
+C(metric_raw)[T.peak_dec_ms2]                       -3.485    0.692 -5.035 0.000 -4.841 -2.128
+C(metric_raw)[T.mean_sprint_dist_m]                 18.752    0.692 27.098 0.000 17.396 20.109
+C(metric_raw)[T.mean_sprint_duration_s]             17.999    0.692 26.009 0.000 16.642 19.355
+C(metric_raw)[T.peak_speed_ms]                       5.016    0.692  7.249 0.000  3.660  6.373
+C(position_group_primary)[T.CB]                      0.488    0.835  0.585 0.559 -1.148  2.125
+C(position_group_primary)[T.FB]                     -1.072    0.849 -1.263 0.207 -2.735  0.591
+C(position_group_primary)[T.AM]                     -0.214    0.842 -0.254 0.800 -1.863  1.436
+C(position_group_primary)[T.CF]                      0.547    1.062  0.515 0.607 -1.535  2.628
+Group Var                                           10.000    0.245                           
+==============================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                     estimate       SE         z            p  lower_95  upper_95
+Intercept                                             4.66371 0.751754   6.20378  5.51244e-10    3.1903   6.13712
+C(metric_raw)[T.high_speed_running_distance_per_90]   13.8259 0.692025   19.9789  8.40609e-89   12.4695   15.1822
+C(metric_raw)[T.sprinting_distance_per_90]            34.5836 0.692025   49.9745            0   33.2273     35.94
+C(metric_raw)[T.n_sprints_per_90]                     30.7864 0.692025   44.4874            0   29.4301   32.1428
+C(metric_raw)[T.CoD_low_per_90]                       33.4495 0.692025   48.3357            0   32.0932   34.8058
+C(metric_raw)[T.CoD_medium_per_90]                    13.8935 0.692025   20.0766  1.18116e-89   12.5372   15.2499
+C(metric_raw)[T.CoD_high_per_90]                      9.20709 0.692025   13.3046  2.17765e-40   7.85074   10.5634
+C(metric_raw)[T.CoD_total_per_90]                     9.46903 0.692025   13.6831  1.28146e-42   8.11269   10.8254
+C(metric_raw)[T.n_acc_3_per_90]                       12.5011 0.692025   18.0645   6.0649e-73   11.1448   13.8574
+C(metric_raw)[T.n_dec_3_per_90]                       12.3721 0.692025   17.8781  1.74844e-71   11.0157   13.7284
+C(metric_raw)[T.dist_acc_3_m_per_90]                  13.0173 0.692025   18.8105  6.19751e-79    11.661   14.3737
+C(metric_raw)[T.dist_dec_3_m_per_90]                  11.3847 0.692025   16.4513  8.20437e-61   10.0284   12.7411
+C(metric_raw)[T.mean_acc_magnitude_ms2]               -1.6108 0.692025  -2.32766    0.0199302  -2.96714 -0.254455
+C(metric_raw)[T.mean_dec_magnitude_ms2]              -1.70005 0.692025  -2.45663    0.0140248  -3.05639 -0.343703
+C(metric_raw)[T.peak_acc_ms2]                        -2.57205 0.692025   -3.7167  0.000201839   -3.9284  -1.21571
+C(metric_raw)[T.peak_dec_ms2]                        -3.48454 0.692025  -5.03528  4.77142e-07  -4.84089   -2.1282
+C(metric_raw)[T.mean_sprint_dist_m]                   18.7524 0.692025   27.0979  1.0436e-161    17.396   20.1087
+C(metric_raw)[T.mean_sprint_duration_s]               17.9986 0.692025   26.0087 3.95112e-149   16.6423    19.355
+C(metric_raw)[T.peak_speed_ms]                        5.01642 0.692025    7.2489  4.20177e-13   3.66007   6.37276
+C(position_group_primary)[T.CB]                      0.488302 0.834911  0.584856     0.558645  -1.14809    2.1247
+C(position_group_primary)[T.FB]                      -1.07189  0.84866  -1.26304     0.206575  -2.73523  0.591453
+C(position_group_primary)[T.AM]                     -0.213572 0.841598 -0.253769     0.799674  -1.86307   1.43593
+C(position_group_primary)[T.CF]                      0.546543   1.0619  0.514686     0.606772  -1.53473   2.62782
+
+----------------------------------------------------------------------------------------------------
+M3 (REML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
+----------------------------------------------------------------------------------------------------
+Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
+Log-likelihood: -8737.25
+Variance player (random intercept): 10.1604   Residual variance: 31.9444   ICC: 0.241311
+Warnings during fitting: RuntimeWarning: divide by zero encountered in slogdet; RuntimeWarning: invalid value encountered in slogdet; RuntimeWarning: overflow encountered in slogdet; SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                                             Mixed Linear Model Regression Results
+================================================================================================================================
+Model:                                    MixedLM                         Dependent Variable:                         cv_percent
+No. Observations:                         2774                            Method:                                     REML      
+No. Groups:                               146                             Scale:                                      31.9444   
+Min. group size:                          19                              Log-Likelihood:                             -8737.2464
+Max. group size:                          19                              Converged:                                  Yes       
+Mean group size:                          19.0                                                                                  
+--------------------------------------------------------------------------------------------------------------------------------
+                                                                                     Coef.  Std.Err.   z    P>|z|  [0.025 0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                             4.324    1.097  3.942 0.000   2.174  6.474
+C(metric_raw)[T.high_speed_running_distance_per_90]                                  14.174    1.351 10.491 0.000  11.526 16.822
+C(metric_raw)[T.sprinting_distance_per_90]                                           39.139    1.351 28.969 0.000  36.491 41.787
+C(metric_raw)[T.n_sprints_per_90]                                                    34.502    1.351 25.537 0.000  31.854 37.150
+C(metric_raw)[T.CoD_low_per_90]                                                      31.650    1.351 23.426 0.000  29.002 34.298
+C(metric_raw)[T.CoD_medium_per_90]                                                   12.381    1.351  9.164 0.000   9.733 15.029
+C(metric_raw)[T.CoD_high_per_90]                                                      8.907    1.351  6.593 0.000   6.259 11.555
+C(metric_raw)[T.CoD_total_per_90]                                                     8.862    1.351  6.560 0.000   6.214 11.510
+C(metric_raw)[T.n_acc_3_per_90]                                                      11.447    1.351  8.473 0.000   8.799 14.095
+C(metric_raw)[T.n_dec_3_per_90]                                                      11.267    1.351  8.340 0.000   8.619 13.915
+C(metric_raw)[T.dist_acc_3_m_per_90]                                                 12.568    1.351  9.302 0.000   9.920 15.216
+C(metric_raw)[T.dist_dec_3_m_per_90]                                                 10.968    1.351  8.118 0.000   8.320 13.617
+C(metric_raw)[T.mean_acc_magnitude_ms2]                                              -1.430    1.351 -1.058 0.290  -4.078  1.218
+C(metric_raw)[T.mean_dec_magnitude_ms2]                                              -1.656    1.351 -1.226 0.220  -4.304  0.992
+C(metric_raw)[T.peak_acc_ms2]                                                        -2.404    1.351 -1.779 0.075  -5.052  0.244
+C(metric_raw)[T.peak_dec_ms2]                                                        -3.390    1.351 -2.509 0.012  -6.038 -0.742
+C(metric_raw)[T.mean_sprint_dist_m]                                                  20.108    1.351 14.883 0.000  17.460 22.756
+C(metric_raw)[T.mean_sprint_duration_s]                                              19.374    1.351 14.340 0.000  16.726 22.022
+C(metric_raw)[T.peak_speed_ms]                                                        6.876    1.351  5.089 0.000   4.227  9.524
+C(position_group_primary)[T.CB]                                                       0.277    1.574  0.176 0.861  -2.809  3.362
+C(position_group_primary)[T.FB]                                                       0.189    1.600  0.118 0.906  -2.948  3.325
+C(position_group_primary)[T.AM]                                                       0.329    1.587  0.207 0.836  -2.781  3.440
+C(position_group_primary)[T.CF]                                                       0.556    2.002  0.278 0.781  -3.369  4.481
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CB]   2.213    1.939  1.141 0.254  -1.588  6.014
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CB]            0.623    1.939  0.321 0.748  -3.178  4.424
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CB]                    -1.980    1.939 -1.021 0.307  -5.781  1.821
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CB]                      -1.818    1.939 -0.937 0.349  -5.619  1.984
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CB]                    1.103    1.939  0.569 0.569  -2.698  4.905
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CB]                      0.327    1.939  0.169 0.866  -3.474  4.129
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CB]                     0.595    1.939  0.307 0.759  -3.206  4.396
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CB]                       0.123    1.939  0.063 0.950  -3.679  3.924
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CB]                       0.445    1.939  0.230 0.818  -3.356  4.247
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CB]                 -0.655    1.939 -0.338 0.736  -4.456  3.146
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CB]                 -0.374    1.939 -0.193 0.847  -4.176  3.427
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CB]              -0.373    1.939 -0.193 0.847  -4.175  3.428
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CB]              -0.312    1.939 -0.161 0.872  -4.114  3.489
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CB]                         0.032    1.939  0.017 0.987  -3.769  3.833
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CB]                        -0.068    1.939 -0.035 0.972  -3.869  3.733
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CB]                   3.803    1.939  1.961 0.050   0.001  7.604
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CB]               3.634    1.939  1.874 0.061  -0.167  7.435
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CB]                       -3.296    1.939 -1.699 0.089  -7.097  0.506
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.FB]  -0.342    1.971 -0.173 0.862  -4.206  3.522
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.FB]          -11.596    1.971 -5.882 0.000 -15.459 -7.732
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.FB]                    -8.105    1.971 -4.111 0.000 -11.968 -4.241
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.FB]                       0.430    1.971  0.218 0.827  -3.433  4.294
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.FB]                    2.435    1.971  1.235 0.217  -1.428  6.299
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.FB]                     -0.030    1.971 -0.015 0.988  -3.894  3.833
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.FB]                     0.493    1.971  0.250 0.803  -3.371  4.357
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.FB]                       2.260    1.971  1.146 0.252  -1.604  6.123
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.FB]                       2.030    1.971  1.030 0.303  -1.834  5.894
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.FB]                  1.914    1.971  0.971 0.332  -1.950  5.778
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.FB]                  1.225    1.971  0.622 0.534  -2.639  5.089
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.FB]               0.070    1.971  0.036 0.972  -3.794  3.934
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.FB]               0.185    1.971  0.094 0.925  -3.679  4.049
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.FB]                        -0.408    1.971 -0.207 0.836  -4.272  3.456
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.FB]                        -0.343    1.971 -0.174 0.862  -4.207  3.521
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.FB]                  -5.468    1.971 -2.774 0.006  -9.332 -1.604
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.FB]              -5.344    1.971 -2.711 0.007  -9.208 -1.480
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.FB]                       -3.357    1.971 -1.703 0.089  -7.221  0.507
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.AM]  -3.189    1.955 -1.631 0.103  -7.021  0.642
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.AM]           -6.916    1.955 -3.538 0.000 -10.748 -3.084
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.AM]                    -4.781    1.955 -2.445 0.014  -8.612 -0.949
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.AM]                       5.858    1.955  2.997 0.003   2.026  9.690
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.AM]                    2.128    1.955  1.089 0.276  -1.703  5.960
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.AM]                      0.494    1.955  0.253 0.800  -3.337  4.326
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.AM]                     0.918    1.955  0.470 0.639  -2.914  4.750
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.AM]                       1.526    1.955  0.780 0.435  -2.306  5.357
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.AM]                       1.611    1.955  0.824 0.410  -2.221  5.442
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.AM]                  0.400    1.955  0.205 0.838  -3.432  4.232
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.AM]                  0.555    1.955  0.284 0.776  -3.276  4.387
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.AM]              -0.321    1.955 -0.164 0.869  -4.153  3.510
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.AM]              -0.003    1.955 -0.001 0.999  -3.835  3.829
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.AM]                        -0.403    1.955 -0.206 0.837  -4.234  3.429
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.AM]                        -0.095    1.955 -0.048 0.961  -3.926  3.737
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.AM]                  -3.566    1.955 -1.824 0.068  -7.398  0.265
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.AM]              -3.544    1.955 -1.813 0.070  -7.375  0.288
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.AM]                       -0.985    1.955 -0.504 0.614  -4.816  2.847
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CF]  -0.748    2.467 -0.303 0.762  -5.582  4.087
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CF]           -6.993    2.467 -2.835 0.005 -11.828 -2.158
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CF]                    -4.864    2.467 -1.972 0.049  -9.699 -0.030
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CF]                       8.130    2.467  3.296 0.001   3.296 12.965
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CF]                    2.719    2.467  1.102 0.270  -2.116  7.553
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CF]                      1.207    2.467  0.489 0.625  -3.627  6.042
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CF]                     1.619    2.467  0.656 0.512  -3.215  6.454
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CF]                       2.064    2.467  0.837 0.403  -2.770  6.899
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CF]                       2.141    2.467  0.868 0.385  -2.694  6.975
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CF]                  1.005    2.467  0.407 0.684  -3.830  5.840
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CF]                  1.159    2.467  0.470 0.639  -3.676  5.993
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CF]              -0.397    2.467 -0.161 0.872  -5.232  4.437
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CF]              -0.118    2.467 -0.048 0.962  -4.952  4.717
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CF]                        -0.004    2.467 -0.001 0.999  -4.838  4.831
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CF]                         0.138    2.467  0.056 0.955  -4.696  4.973
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CF]                  -2.648    2.467 -1.074 0.283  -7.483  2.186
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CF]              -2.782    2.467 -1.128 0.259  -7.616  2.053
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                       -1.806    2.467 -0.732 0.464  -6.641  3.029
+Group Var                                                                            10.160    0.256                            
+================================================================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                                                       estimate      SE           z            p   lower_95   upper_95
+Intercept                                                                               4.32401 1.09681     3.94235  8.06869e-05     2.1743    6.47372
+C(metric_raw)[T.high_speed_running_distance_per_90]                                     14.1741 1.35107      10.491  9.50276e-26     11.526    16.8221
+C(metric_raw)[T.sprinting_distance_per_90]                                              39.1392 1.35107      28.969 1.61703e-184    36.4911    41.7872
+C(metric_raw)[T.n_sprints_per_90]                                                       34.5024 1.35107      25.537 7.64894e-144    31.8543    37.1504
+C(metric_raw)[T.CoD_low_per_90]                                                         31.6496 1.35107     23.4256 2.34503e-121    29.0016    34.2977
+C(metric_raw)[T.CoD_medium_per_90]                                                      12.3812 1.35107     9.16399  5.00151e-20    9.73315    15.0292
+C(metric_raw)[T.CoD_high_per_90]                                                        8.90715 1.35107     6.59266  4.32011e-11     6.2591    11.5552
+C(metric_raw)[T.CoD_total_per_90]                                                        8.8624 1.35107     6.55954  5.39746e-11    6.21435    11.5105
+C(metric_raw)[T.n_acc_3_per_90]                                                         11.4471 1.35107     8.47263  2.39917e-17    8.79907    14.0952
+C(metric_raw)[T.n_dec_3_per_90]                                                         11.2674 1.35107     8.33961  7.45346e-17    8.61936    13.9155
+C(metric_raw)[T.dist_acc_3_m_per_90]                                                     12.568 1.35107     9.30222  1.37549e-20     9.9199     15.216
+C(metric_raw)[T.dist_dec_3_m_per_90]                                                    10.9685 1.35107     8.11834  4.72615e-16     8.3204    13.6165
+C(metric_raw)[T.mean_acc_magnitude_ms2]                                                -1.43001 1.35107    -1.05842     0.289862   -4.07806    1.21804
+C(metric_raw)[T.mean_dec_magnitude_ms2]                                                -1.65607 1.35107    -1.22575     0.220294   -4.30412   0.991981
+C(metric_raw)[T.peak_acc_ms2]                                                          -2.40409 1.35107    -1.77939    0.0751754   -5.05214   0.243964
+C(metric_raw)[T.peak_dec_ms2]                                                          -3.38977 1.35107    -2.50895     0.012109   -6.03782   -0.74172
+C(metric_raw)[T.mean_sprint_dist_m]                                                     20.1077 1.35107     14.8827  4.26609e-50    17.4596    22.7557
+C(metric_raw)[T.mean_sprint_duration_s]                                                 19.3744 1.35107       14.34  1.22969e-46    16.7264    22.0225
+C(metric_raw)[T.peak_speed_ms]                                                          6.87551 1.35107     5.08893  3.60084e-07    4.22746    9.52356
+C(position_group_primary)[T.CB]                                                        0.276617 1.57445    0.175691     0.860536   -2.80925    3.36248
+C(position_group_primary)[T.FB]                                                        0.188623 1.60038    0.117862     0.906177   -2.94806    3.32531
+C(position_group_primary)[T.AM]                                                        0.329127 1.58706    0.207381     0.835712   -2.78146    3.43971
+C(position_group_primary)[T.CF]                                                        0.555852 2.00249     0.27758     0.781335   -3.36896    4.48066
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CB]     2.21326 1.93944     1.14119     0.253792   -1.58797    6.01449
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CB]             0.622887 1.93944    0.321169     0.748082   -3.17834    4.42411
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CB]                      -1.97987 1.93944    -1.02085     0.307328   -5.78109    1.82136
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CB]                         -1.8175 1.93944    -0.93713     0.348692   -5.61873    1.98372
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CB]                      1.10347 1.93944    0.568964     0.569381   -2.69776     4.9047
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CB]                        0.32747 1.93944    0.168848     0.865916   -3.47376     4.1287
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CB]                      0.594786 1.93944     0.30668     0.759087   -3.20644    4.39601
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CB]                        0.122571 1.93944   0.0631991     0.949608   -3.67866     3.9238
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CB]                         0.44532 1.93944    0.229613     0.818392   -3.35591    4.24655
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CB]                  -0.654786 1.93944   -0.337617     0.735652   -4.45601    3.14644
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CB]                  -0.374494 1.93944   -0.193094     0.846885   -4.17572    3.42673
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CB]               -0.373489 1.93944   -0.192576     0.847291   -4.17472    3.42774
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CB]               -0.312329 1.93944   -0.161041     0.872061   -4.11356     3.4889
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CB]                         0.0322612 1.93944   0.0166343     0.986728   -3.76897    3.83349
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CB]                        -0.0681973 1.93944  -0.0351635     0.971949   -3.86942    3.73303
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CB]                     3.80257 1.93944     1.96066     0.049919 0.00134527     7.6038
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CB]                 3.63374 1.93944      1.8736    0.0609849  -0.167489    7.43497
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CB]                         -3.29566 1.93944    -1.69929    0.0892651   -7.09689   0.505566
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.FB]   -0.341866 1.97138   -0.173415     0.862325   -4.20569    3.52196
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.FB]             -11.5956 1.97138      -5.882  4.05333e-09   -15.4595   -7.73181
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.FB]                      -8.10465 1.97138    -4.11117  3.93664e-05   -11.9685   -4.24083
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.FB]                        0.430457 1.97138    0.218354     0.827153   -3.43337    4.29428
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.FB]                      2.43533 1.97138     1.23535     0.216701   -1.42849    6.29916
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.FB]                      -0.030494 1.97138  -0.0154684     0.987659   -3.89432    3.83333
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.FB]                       0.49284 1.97138    0.249998     0.802589   -3.37098    4.35667
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.FB]                         2.25951 1.97138     1.14616     0.251729   -1.60431    6.12333
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.FB]                         2.02992 1.97138      1.0297     0.303152    -1.8339    5.89375
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.FB]                    1.91405 1.97138    0.970921     0.331588   -1.94978    5.77787
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.FB]                    1.22525 1.97138    0.621521     0.534257   -2.63857    5.08908
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.FB]               0.0700725 1.97138    0.035545     0.971645   -3.79375     3.9339
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.FB]                0.185257 1.97138   0.0939736      0.92513   -3.67857    4.04908
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.FB]                         -0.407948 1.97138   -0.206936      0.83606   -4.27177    3.45588
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.FB]                         -0.342962 1.97138   -0.173971     0.861888   -4.20679    3.52086
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.FB]                    -5.46795 1.97138    -2.77367   0.00554275   -9.33177   -1.60412
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.FB]                -5.34375 1.97138    -2.71067   0.00671471   -9.20758   -1.47993
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.FB]                         -3.35718 1.97138    -1.70296    0.0885749     -7.221   0.506645
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.AM]    -3.18941 1.95497    -1.63144     0.102799   -7.02109   0.642265
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.AM]             -6.91594 1.95497    -3.53761  0.000403761   -10.7476   -3.08426
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.AM]                      -4.78063 1.95497    -2.44537    0.0144703   -8.61231  -0.948958
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.AM]                         5.85814 1.95497     2.99654   0.00273066    2.02647    9.68982
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.AM]                      2.12841 1.95497     1.08872     0.276278   -1.70326    5.96009
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.AM]                       0.494382 1.95497    0.252884     0.800358   -3.33729    4.32606
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.AM]                      0.917904 1.95497    0.469523     0.638696   -2.91377    4.74958
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.AM]                         1.52572 1.95497    0.780433     0.435136   -2.30595     5.3574
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.AM]                          1.6108 1.95497    0.823948     0.409969   -2.22088    5.44247
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.AM]                   0.400109 1.95497    0.204662     0.837836   -3.43157    4.23178
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.AM]                   0.555446 1.95497    0.284119     0.776319   -3.27623    4.38712
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.AM]               -0.321355 1.95497   -0.164378     0.869433   -4.15303    3.51032
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.AM]             -0.00288117 1.95497 -0.00147377     0.998824   -3.83456    3.82879
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.AM]                         -0.402703 1.95497   -0.205989     0.836799   -4.23438    3.42897
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.AM]                        -0.0946597 1.95497    -0.04842     0.961382   -3.92634    3.73702
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.AM]                    -3.56623 1.95497    -1.82419    0.0681238   -7.39791   0.265441
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.AM]                -3.54368 1.95497    -1.81265    0.0698857   -7.37536   0.287994
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.AM]                        -0.984693 1.95497   -0.503686     0.614482   -4.81637    2.84698
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CF]   -0.747527 2.46671   -0.303047     0.761854   -5.58218    4.08713
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CF]             -6.99311 2.46671      -2.835   0.00458261   -11.8278   -2.15845
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CF]                      -4.86445 2.46671    -1.97204    0.0486048   -9.69911 -0.0297932
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CF]                         8.13025 2.46671     3.29599  0.000980751    3.29559    12.9649
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CF]                      2.71882 2.46671     1.10221     0.270371   -2.11583    7.55348
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CF]                        1.20726 2.46671     0.48942     0.624544    -3.6274    6.04191
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CF]                       1.61926 2.46671    0.656446     0.511537    -3.2154    6.45392
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CF]                         2.06448 2.46671    0.836936     0.402629   -2.77018    6.89913
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CF]                         2.14065 2.46671    0.867818     0.385494     -2.694    6.97531
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CF]                    1.00507 2.46671    0.407454     0.683674   -3.82959    5.83973
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CF]                    1.15855 2.46671    0.469673     0.638589   -3.67611     5.9932
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CF]               -0.397298 2.46671   -0.161064     0.872043   -5.23196    4.43736
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CF]               -0.117641 2.46671  -0.0476914     0.961962    -4.9523    4.71702
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CF]                       -0.00363927 2.46671 -0.00147536     0.998823    -4.8383    4.83102
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CF]                          0.138328 2.46671   0.0560779      0.95528   -4.69633    4.97298
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CF]                    -2.64847 2.46671    -1.07368     0.282964   -7.48312    2.18619
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CF]                -2.78153 2.46671    -1.12763     0.259477   -7.61619    2.05313
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                         -1.80586 2.46671   -0.732095     0.464111   -6.64052    3.02879
+
+----------------------------------------------------------------------------------------------------
+M1 (ML)   formula: cv_percent ~ C(metric_raw)
+----------------------------------------------------------------------------------------------------
+Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
+Log-likelihood: -8992.19   AIC: 18026.4   BIC: 18150.9
+Variance player (random intercept): 9.93408   Residual variance: 34.7201   ICC: 0.222467
+Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                            Mixed Linear Model Regression Results
+==============================================================================================
+Model:                          MixedLM             Dependent Variable:             cv_percent
+No. Observations:               2774                Method:                         ML        
+No. Groups:                     146                 Scale:                          34.7201   
+Min. group size:                19                  Log-Likelihood:                 -8992.1902
+Max. group size:                19                  Converged:                      Yes       
+Mean group size:                19.0                                                          
+----------------------------------------------------------------------------------------------
+                                                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------------------------
+Intercept                                            4.556    0.553  8.238 0.000  3.472  5.640
+C(metric_raw)[T.high_speed_running_distance_per_90] 13.826    0.690 20.048 0.000 12.474 15.178
+C(metric_raw)[T.sprinting_distance_per_90]          34.584    0.690 50.147 0.000 33.232 35.935
+C(metric_raw)[T.n_sprints_per_90]                   30.786    0.690 44.641 0.000 29.435 32.138
+C(metric_raw)[T.CoD_low_per_90]                     33.450    0.690 48.502 0.000 32.098 34.801
+C(metric_raw)[T.CoD_medium_per_90]                  13.894    0.690 20.146 0.000 12.542 15.245
+C(metric_raw)[T.CoD_high_per_90]                     9.207    0.690 13.350 0.000  7.855 10.559
+C(metric_raw)[T.CoD_total_per_90]                    9.469    0.690 13.730 0.000  8.117 10.821
+C(metric_raw)[T.n_acc_3_per_90]                     12.501    0.690 18.127 0.000 11.149 13.853
+C(metric_raw)[T.n_dec_3_per_90]                     12.372    0.690 17.940 0.000 11.020 13.724
+C(metric_raw)[T.dist_acc_3_m_per_90]                13.017    0.690 18.875 0.000 11.666 14.369
+C(metric_raw)[T.dist_dec_3_m_per_90]                11.385    0.690 16.508 0.000 10.033 12.736
+C(metric_raw)[T.mean_acc_magnitude_ms2]             -1.611    0.690 -2.336 0.020 -2.962 -0.259
+C(metric_raw)[T.mean_dec_magnitude_ms2]             -1.700    0.690 -2.465 0.014 -3.052 -0.348
+C(metric_raw)[T.peak_acc_ms2]                       -2.572    0.690 -3.729 0.000 -3.924 -1.220
+C(metric_raw)[T.peak_dec_ms2]                       -3.485    0.690 -5.053 0.000 -4.836 -2.133
+C(metric_raw)[T.mean_sprint_dist_m]                 18.752    0.690 27.191 0.000 17.401 20.104
+C(metric_raw)[T.mean_sprint_duration_s]             17.999    0.690 26.098 0.000 16.647 19.350
+C(metric_raw)[T.peak_speed_ms]                       5.016    0.690  7.274 0.000  3.665  6.368
+Group Var                                            9.934    0.240                           
+==============================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                     estimate       SE        z           p  lower_95  upper_95
+Intercept                                             4.55583 0.553038  8.23782  1.7537e-16   3.47189   5.63976
+C(metric_raw)[T.high_speed_running_distance_per_90]   13.8259 0.689651  20.0477 2.11517e-89   12.4742   15.1776
+C(metric_raw)[T.sprinting_distance_per_90]            34.5836 0.689651  50.1465           0   33.2319   35.9353
+C(metric_raw)[T.n_sprints_per_90]                     30.7864 0.689651  44.6406           0   29.4347   32.1381
+C(metric_raw)[T.CoD_low_per_90]                       33.4495 0.689651  48.5021           0   32.0978   34.8012
+C(metric_raw)[T.CoD_medium_per_90]                    13.8935 0.689651  20.1458 2.93221e-90   12.5418   15.2452
+C(metric_raw)[T.CoD_high_per_90]                      9.20709 0.689651  13.3504 1.17876e-40    7.8554   10.5588
+C(metric_raw)[T.CoD_total_per_90]                     9.46903 0.689651  13.7302 6.69644e-43   8.11734   10.8207
+C(metric_raw)[T.n_acc_3_per_90]                       12.5011 0.689651  18.1267 1.96175e-73   11.1494   13.8528
+C(metric_raw)[T.n_dec_3_per_90]                       12.3721 0.689651  17.9396 5.78771e-72   11.0204   13.7237
+C(metric_raw)[T.dist_acc_3_m_per_90]                  13.0173 0.689651  18.8752 1.82323e-79   11.6656    14.369
+C(metric_raw)[T.dist_dec_3_m_per_90]                  11.3847 0.689651   16.508 3.21552e-61    10.033   12.7364
+C(metric_raw)[T.mean_acc_magnitude_ms2]               -1.6108 0.689651 -2.33567   0.0195083  -2.96249 -0.259108
+C(metric_raw)[T.mean_dec_magnitude_ms2]              -1.70005 0.689651 -2.46508   0.0136981  -3.05174 -0.348356
+C(metric_raw)[T.peak_acc_ms2]                        -2.57205 0.689651  -3.7295 0.000191862  -3.92374  -1.22036
+C(metric_raw)[T.peak_dec_ms2]                        -3.48454 0.689651 -5.05262 4.35797e-07  -4.83623  -2.13285
+C(metric_raw)[T.mean_sprint_dist_m]                   18.7524 0.689651  27.1911 8.2678e-163   17.4007   20.1041
+C(metric_raw)[T.mean_sprint_duration_s]               17.9986 0.689651  26.0982 3.8212e-150    16.647   19.3503
+C(metric_raw)[T.peak_speed_ms]                        5.01642 0.689651  7.27385 3.49381e-13   3.66473   6.36811
+
+----------------------------------------------------------------------------------------------------
+M2 (ML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
+----------------------------------------------------------------------------------------------------
+Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
+Log-likelihood: -8990.13   AIC: 18030.3   BIC: 18178.5
+Variance player (random intercept): 9.60712   Residual variance: 34.7201   ICC: 0.216732
+Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                            Mixed Linear Model Regression Results
+==============================================================================================
+Model:                          MixedLM             Dependent Variable:             cv_percent
+No. Observations:               2774                Method:                         ML        
+No. Groups:                     146                 Scale:                          34.7201   
+Min. group size:                19                  Log-Likelihood:                 -8990.1325
+Max. group size:                19                  Converged:                      Yes       
+Mean group size:                19.0                                                          
+----------------------------------------------------------------------------------------------
+                                                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------------------------
+Intercept                                            4.664    0.743  6.277 0.000  3.208  6.120
+C(metric_raw)[T.high_speed_running_distance_per_90] 13.826    0.690 20.048 0.000 12.474 15.178
+C(metric_raw)[T.sprinting_distance_per_90]          34.584    0.690 50.147 0.000 33.232 35.935
+C(metric_raw)[T.n_sprints_per_90]                   30.786    0.690 44.641 0.000 29.435 32.138
+C(metric_raw)[T.CoD_low_per_90]                     33.450    0.690 48.502 0.000 32.098 34.801
+C(metric_raw)[T.CoD_medium_per_90]                  13.894    0.690 20.146 0.000 12.542 15.245
+C(metric_raw)[T.CoD_high_per_90]                     9.207    0.690 13.350 0.000  7.855 10.559
+C(metric_raw)[T.CoD_total_per_90]                    9.469    0.690 13.730 0.000  8.117 10.821
+C(metric_raw)[T.n_acc_3_per_90]                     12.501    0.690 18.127 0.000 11.149 13.853
+C(metric_raw)[T.n_dec_3_per_90]                     12.372    0.690 17.940 0.000 11.020 13.724
+C(metric_raw)[T.dist_acc_3_m_per_90]                13.017    0.690 18.875 0.000 11.666 14.369
+C(metric_raw)[T.dist_dec_3_m_per_90]                11.385    0.690 16.508 0.000 10.033 12.736
+C(metric_raw)[T.mean_acc_magnitude_ms2]             -1.611    0.690 -2.336 0.020 -2.962 -0.259
+C(metric_raw)[T.mean_dec_magnitude_ms2]             -1.700    0.690 -2.465 0.014 -3.052 -0.348
+C(metric_raw)[T.peak_acc_ms2]                       -2.572    0.690 -3.729 0.000 -3.924 -1.220
+C(metric_raw)[T.peak_dec_ms2]                       -3.485    0.690 -5.053 0.000 -4.836 -2.133
+C(metric_raw)[T.mean_sprint_dist_m]                 18.752    0.690 27.191 0.000 17.401 20.104
+C(metric_raw)[T.mean_sprint_duration_s]             17.999    0.690 26.098 0.000 16.647 19.350
+C(metric_raw)[T.peak_speed_ms]                       5.016    0.690  7.274 0.000  3.665  6.368
+C(position_group_primary)[T.CB]                      0.488    0.820  0.595 0.552 -1.120  2.096
+C(position_group_primary)[T.FB]                     -1.072    0.834 -1.285 0.199 -2.706  0.563
+C(position_group_primary)[T.AM]                     -0.214    0.827 -0.258 0.796 -1.835  1.407
+C(position_group_primary)[T.CF]                      0.547    1.044  0.524 0.600 -1.499  2.592
+Group Var                                            9.607    0.233                           
+==============================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                     estimate       SE        z            p  lower_95  upper_95
+Intercept                                             4.66371 0.742962  6.27718  3.44761e-10   3.20753   6.11989
+C(metric_raw)[T.high_speed_running_distance_per_90]   13.8259 0.689651  20.0477   2.1153e-89   12.4742   15.1776
+C(metric_raw)[T.sprinting_distance_per_90]            34.5836 0.689651  50.1465            0   33.2319   35.9353
+C(metric_raw)[T.n_sprints_per_90]                     30.7864 0.689651  44.6406            0   29.4347   32.1381
+C(metric_raw)[T.CoD_low_per_90]                       33.4495 0.689651  48.5021            0   32.0978   34.8012
+C(metric_raw)[T.CoD_medium_per_90]                    13.8935 0.689651  20.1457   2.9324e-90   12.5418   15.2452
+C(metric_raw)[T.CoD_high_per_90]                      9.20709 0.689651  13.3504  1.17879e-40    7.8554   10.5588
+C(metric_raw)[T.CoD_total_per_90]                     9.46903 0.689651  13.7302  6.69664e-43   8.11734   10.8207
+C(metric_raw)[T.n_acc_3_per_90]                       12.5011 0.689651  18.1267  1.96185e-73   11.1494   13.8528
+C(metric_raw)[T.n_dec_3_per_90]                       12.3721 0.689651  17.9396    5.788e-72   11.0204   13.7237
+C(metric_raw)[T.dist_acc_3_m_per_90]                  13.0173 0.689651  18.8752  1.82333e-79   11.6656    14.369
+C(metric_raw)[T.dist_dec_3_m_per_90]                  11.3847 0.689651   16.508  3.21566e-61    10.033   12.7364
+C(metric_raw)[T.mean_acc_magnitude_ms2]               -1.6108 0.689651 -2.33567    0.0195083  -2.96249 -0.259108
+C(metric_raw)[T.mean_dec_magnitude_ms2]              -1.70005 0.689651 -2.46508    0.0136982  -3.05174 -0.348356
+C(metric_raw)[T.peak_acc_ms2]                        -2.57205 0.689651  -3.7295  0.000191862  -3.92374  -1.22036
+C(metric_raw)[T.peak_dec_ms2]                        -3.48454 0.689651 -5.05262  4.35799e-07  -4.83623  -2.13285
+C(metric_raw)[T.mean_sprint_dist_m]                   18.7524 0.689651  27.1911 8.26874e-163   17.4007   20.1041
+C(metric_raw)[T.mean_sprint_duration_s]               17.9986 0.689651  26.0982  3.8216e-150    16.647   19.3503
+C(metric_raw)[T.peak_speed_ms]                        5.01642 0.689651  7.27385  3.49384e-13   3.66473   6.36811
+C(position_group_primary)[T.CB]                      0.488302 0.820488 0.595137     0.551752  -1.11982   2.09643
+C(position_group_primary)[T.FB]                      -1.07189 0.833999 -1.28524     0.198708   -2.7065  0.562719
+C(position_group_primary)[T.AM]                     -0.213572  0.82706 -0.25823     0.796229  -1.83458   1.40744
+C(position_group_primary)[T.CF]                      0.546543  1.04355 0.523734     0.600464  -1.49878   2.59187
+
+----------------------------------------------------------------------------------------------------
+M3 (ML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
+----------------------------------------------------------------------------------------------------
+Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
+Log-likelihood: -8834.87   AIC: 17863.7   BIC: 18438.8
+Variance player (random intercept): 9.81095   Residual variance: 30.8506   ICC: 0.241283
+Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
+
+statsmodels summary:
+                                             Mixed Linear Model Regression Results
+================================================================================================================================
+Model:                                    MixedLM                         Dependent Variable:                         cv_percent
+No. Observations:                         2774                            Method:                                     ML        
+No. Groups:                               146                             Scale:                                      30.8506   
+Min. group size:                          19                              Log-Likelihood:                             -8834.8666
+Max. group size:                          19                              Converged:                                  Yes       
+Mean group size:                          19.0                                                                                  
+--------------------------------------------------------------------------------------------------------------------------------
+                                                                                     Coef.  Std.Err.   z    P>|z|  [0.025 0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                             4.324    1.078  4.012 0.000   2.211  6.437
+C(metric_raw)[T.high_speed_running_distance_per_90]                                  14.174    1.328 10.675 0.000  11.572 16.776
+C(metric_raw)[T.sprinting_distance_per_90]                                           39.139    1.328 29.478 0.000  36.537 41.742
+C(metric_raw)[T.n_sprints_per_90]                                                    34.502    1.328 25.986 0.000  31.900 37.105
+C(metric_raw)[T.CoD_low_per_90]                                                      31.650    1.328 23.837 0.000  29.047 34.252
+C(metric_raw)[T.CoD_medium_per_90]                                                   12.381    1.328  9.325 0.000   9.779 14.984
+C(metric_raw)[T.CoD_high_per_90]                                                      8.907    1.328  6.709 0.000   6.305 11.509
+C(metric_raw)[T.CoD_total_per_90]                                                     8.862    1.328  6.675 0.000   6.260 11.465
+C(metric_raw)[T.n_acc_3_per_90]                                                      11.447    1.328  8.622 0.000   8.845 14.049
+C(metric_raw)[T.n_dec_3_per_90]                                                      11.267    1.328  8.486 0.000   8.665 13.870
+C(metric_raw)[T.dist_acc_3_m_per_90]                                                 12.568    1.328  9.466 0.000   9.966 15.170
+C(metric_raw)[T.dist_dec_3_m_per_90]                                                 10.968    1.328  8.261 0.000   8.366 13.571
+C(metric_raw)[T.mean_acc_magnitude_ms2]                                              -1.430    1.328 -1.077 0.281  -4.032  1.172
+C(metric_raw)[T.mean_dec_magnitude_ms2]                                              -1.656    1.328 -1.247 0.212  -4.258  0.946
+C(metric_raw)[T.peak_acc_ms2]                                                        -2.404    1.328 -1.811 0.070  -5.006  0.198
+C(metric_raw)[T.peak_dec_ms2]                                                        -3.390    1.328 -2.553 0.011  -5.992 -0.787
+C(metric_raw)[T.mean_sprint_dist_m]                                                  20.108    1.328 15.144 0.000  17.505 22.710
+C(metric_raw)[T.mean_sprint_duration_s]                                              19.374    1.328 14.592 0.000  16.772 21.977
+C(metric_raw)[T.peak_speed_ms]                                                        6.876    1.328  5.178 0.000   4.273  9.478
+C(position_group_primary)[T.CB]                                                       0.277    1.547  0.179 0.858  -2.756  3.309
+C(position_group_primary)[T.FB]                                                       0.189    1.573  0.120 0.905  -2.894  3.271
+C(position_group_primary)[T.AM]                                                       0.329    1.560  0.211 0.833  -2.728  3.386
+C(position_group_primary)[T.CF]                                                       0.556    1.968  0.282 0.778  -3.301  4.413
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CB]   2.213    1.906  1.161 0.246  -1.522  5.949
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CB]            0.623    1.906  0.327 0.744  -3.113  4.358
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CB]                    -1.980    1.906 -1.039 0.299  -5.715  1.756
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CB]                      -1.818    1.906 -0.954 0.340  -5.553  1.918
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CB]                    1.103    1.906  0.579 0.563  -2.632  4.839
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CB]                      0.327    1.906  0.172 0.864  -3.408  4.063
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CB]                     0.595    1.906  0.312 0.755  -3.141  4.330
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CB]                       0.123    1.906  0.064 0.949  -3.613  3.858
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CB]                       0.445    1.906  0.234 0.815  -3.290  4.181
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CB]                 -0.655    1.906 -0.344 0.731  -4.390  3.081
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CB]                 -0.374    1.906 -0.196 0.844  -4.110  3.361
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CB]              -0.373    1.906 -0.196 0.845  -4.109  3.362
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CB]              -0.312    1.906 -0.164 0.870  -4.048  3.423
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CB]                         0.032    1.906  0.017 0.986  -3.703  3.768
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CB]                        -0.068    1.906 -0.036 0.971  -3.804  3.667
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CB]                   3.803    1.906  1.995 0.046   0.067  7.538
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CB]               3.634    1.906  1.907 0.057  -0.102  7.369
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CB]                       -3.296    1.906 -1.729 0.084  -7.031  0.440
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.FB]  -0.342    1.937 -0.176 0.860  -4.139  3.455
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.FB]          -11.596    1.937 -5.985 0.000 -15.393 -7.799
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.FB]                    -8.105    1.937 -4.183 0.000 -11.902 -4.308
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.FB]                       0.430    1.937  0.222 0.824  -3.367  4.228
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.FB]                    2.435    1.937  1.257 0.209  -1.362  6.232
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.FB]                     -0.030    1.937 -0.016 0.987  -3.828  3.767
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.FB]                     0.493    1.937  0.254 0.799  -3.304  4.290
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.FB]                       2.260    1.937  1.166 0.243  -1.538  6.057
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.FB]                       2.030    1.937  1.048 0.295  -1.767  5.827
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.FB]                  1.914    1.937  0.988 0.323  -1.883  5.711
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.FB]                  1.225    1.937  0.632 0.527  -2.572  5.022
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.FB]               0.070    1.937  0.036 0.971  -3.727  3.867
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.FB]               0.185    1.937  0.096 0.924  -3.612  3.982
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.FB]                        -0.408    1.937 -0.211 0.833  -4.205  3.389
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.FB]                        -0.343    1.937 -0.177 0.859  -4.140  3.454
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.FB]                  -5.468    1.937 -2.822 0.005  -9.265 -1.671
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.FB]              -5.344    1.937 -2.758 0.006  -9.141 -1.547
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.FB]                       -3.357    1.937 -1.733 0.083  -7.154  0.440
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.AM]  -3.189    1.921 -1.660 0.097  -6.955  0.576
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.AM]           -6.916    1.921 -3.600 0.000 -10.681 -3.150
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.AM]                    -4.781    1.921 -2.488 0.013  -8.546 -1.015
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.AM]                       5.858    1.921  3.049 0.002   2.093  9.624
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.AM]                    2.128    1.921  1.108 0.268  -1.637  5.894
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.AM]                      0.494    1.921  0.257 0.797  -3.271  4.260
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.AM]                     0.918    1.921  0.478 0.633  -2.848  4.683
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.AM]                       1.526    1.921  0.794 0.427  -2.240  5.291
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.AM]                       1.611    1.921  0.838 0.402  -2.155  5.376
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.AM]                  0.400    1.921  0.208 0.835  -3.365  4.166
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.AM]                  0.555    1.921  0.289 0.772  -3.210  4.321
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.AM]              -0.321    1.921 -0.167 0.867  -4.087  3.444
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.AM]              -0.003    1.921 -0.001 0.999  -3.768  3.763
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.AM]                        -0.403    1.921 -0.210 0.834  -4.168  3.363
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.AM]                        -0.095    1.921 -0.049 0.961  -3.860  3.671
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.AM]                  -3.566    1.921 -1.856 0.063  -7.332  0.199
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.AM]              -3.544    1.921 -1.845 0.065  -7.309  0.222
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.AM]                       -0.985    1.921 -0.513 0.608  -4.750  2.781
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CF]  -0.748    2.424 -0.308 0.758  -5.499  4.004
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CF]           -6.993    2.424 -2.885 0.004 -11.744 -2.242
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CF]                    -4.864    2.424 -2.007 0.045  -9.616 -0.113
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CF]                       8.130    2.424  3.354 0.001   3.379 12.881
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CF]                    2.719    2.424  1.122 0.262  -2.032  7.470
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CF]                      1.207    2.424  0.498 0.618  -3.544  5.958
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CF]                     1.619    2.424  0.668 0.504  -3.132  6.370
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CF]                       2.064    2.424  0.852 0.394  -2.687  6.816
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CF]                       2.141    2.424  0.883 0.377  -2.611  6.892
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CF]                  1.005    2.424  0.415 0.678  -3.746  5.756
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CF]                  1.159    2.424  0.478 0.633  -3.593  5.910
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CF]              -0.397    2.424 -0.164 0.870  -5.148  4.354
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CF]              -0.118    2.424 -0.049 0.961  -4.869  4.634
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CF]                        -0.004    2.424 -0.002 0.999  -4.755  4.748
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CF]                         0.138    2.424  0.057 0.954  -4.613  4.889
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CF]                  -2.648    2.424 -1.093 0.275  -7.400  2.103
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CF]              -2.782    2.424 -1.147 0.251  -7.533  1.970
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                       -1.806    2.424 -0.745 0.456  -6.557  2.945
+Group Var                                                                             9.811    0.248                            
+================================================================================================================================
+
+
+Fixed effects, unrounded (Wald z tests, 95% CI):
+                                                                                       estimate      SE           z            p  lower_95  upper_95
+Intercept                                                                               4.32401 1.07785      4.0117  6.02826e-05   2.21146   6.43656
+C(metric_raw)[T.high_speed_running_distance_per_90]                                     14.1741 1.32774     10.6753  1.32767e-26   11.5718   16.7764
+C(metric_raw)[T.sprinting_distance_per_90]                                              39.1392 1.32774     29.4781 5.50045e-191   36.5369   41.7415
+C(metric_raw)[T.n_sprints_per_90]                                                       34.5024 1.32774     25.9858 7.16851e-149      31.9   37.1047
+C(metric_raw)[T.CoD_low_per_90]                                                         31.6496 1.32774     23.8372 1.37369e-125   29.0473    34.252
+C(metric_raw)[T.CoD_medium_per_90]                                                      12.3812 1.32774     9.32502  1.10963e-20   9.77888   14.9835
+C(metric_raw)[T.CoD_high_per_90]                                                        8.90715 1.32774     6.70851   1.9662e-11   6.30483   11.5095
+C(metric_raw)[T.CoD_total_per_90]                                                        8.8624 1.32774     6.67481  2.47559e-11   6.26008   11.4647
+C(metric_raw)[T.n_acc_3_per_90]                                                         11.4471 1.32774     8.62151  6.60747e-18    8.8448   14.0494
+C(metric_raw)[T.n_dec_3_per_90]                                                         11.2674 1.32774     8.48616  2.13577e-17   8.66509   13.8697
+C(metric_raw)[T.dist_acc_3_m_per_90]                                                     12.568 1.32774     9.46568   2.9166e-21   9.96563   15.1703
+C(metric_raw)[T.dist_dec_3_m_per_90]                                                    10.9685 1.32774       8.261  1.44461e-16   8.36613   13.5708
+C(metric_raw)[T.mean_acc_magnitude_ms2]                                                -1.43001 1.32774    -1.07702      0.28147  -4.03233   1.17232
+C(metric_raw)[T.mean_dec_magnitude_ms2]                                                -1.65607 1.32774    -1.24729     0.212293  -4.25839  0.946252
+C(metric_raw)[T.peak_acc_ms2]                                                          -2.40409 1.32774    -1.81066    0.0701933  -5.00641  0.198235
+C(metric_raw)[T.peak_dec_ms2]                                                          -3.38977 1.32774    -2.55304    0.0106787  -5.99209 -0.787449
+C(metric_raw)[T.mean_sprint_dist_m]                                                     20.1077 1.32774     15.1443  8.26607e-52   17.5053     22.71
+C(metric_raw)[T.mean_sprint_duration_s]                                                 19.3744 1.32774      14.592   3.1562e-48   16.7721   21.9767
+C(metric_raw)[T.peak_speed_ms]                                                          6.87551 1.32774     5.17836  2.23847e-07   4.27319   9.47783
+C(position_group_primary)[T.CB]                                                        0.276617 1.54723    0.178782     0.858109   -2.7559   3.30914
+C(position_group_primary)[T.FB]                                                        0.188623 1.57271    0.119935     0.904535  -2.89384   3.27108
+C(position_group_primary)[T.AM]                                                        0.329127 1.55963    0.211029     0.832864  -2.72768   3.38594
+C(position_group_primary)[T.CF]                                                        0.555852 1.96787    0.282463     0.777588  -3.30111   4.41281
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CB]     2.21326 1.90594     1.16124     0.245544  -1.52232   5.94884
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CB]             0.622887 1.90594    0.326813     0.743809   -3.1127   4.35847
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CB]                      -1.97987 1.90594    -1.03878     0.298905  -5.71545   1.75572
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CB]                         -1.8175 1.90594   -0.953597     0.340288  -5.55309   1.91808
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CB]                      1.10347 1.90594    0.578962     0.562615  -2.63211   4.83905
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CB]                        0.32747 1.90594    0.171815     0.863583  -3.40811   4.06305
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CB]                      0.594786 1.90594    0.312069     0.754988   -3.1408   4.33037
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CB]                        0.122571 1.90594   0.0643096     0.948724  -3.61301   3.85815
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CB]                         0.44532 1.90594    0.233648     0.815258  -3.29026    4.1809
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CB]                  -0.654786 1.90594   -0.343549     0.731185  -4.39037    3.0808
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CB]                  -0.374494 1.90594   -0.196487     0.844229  -4.11008   3.36109
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CB]               -0.373489 1.90594    -0.19596     0.844642  -4.10907   3.36209
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CB]               -0.312329 1.90594   -0.163871     0.869833  -4.04791   3.42325
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CB]                         0.0322612 1.90594   0.0169266     0.986495  -3.70332   3.76784
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CB]                        -0.0681973 1.90594  -0.0357814     0.971457  -3.80378   3.66739
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CB]                     3.80257 1.90594     1.99511    0.0460307 0.0669888   7.53816
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CB]                 3.63374 1.90594     1.90653    0.0565817 -0.101845   7.36932
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CB]                         -3.29566 1.90594    -1.72915    0.0837826  -7.03124  0.439923
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.FB]   -0.341866 1.93733   -0.176462     0.859931  -4.13897   3.45523
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.FB]             -11.5956 1.93733    -5.98536  2.15907e-09  -15.3927  -7.79853
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.FB]                      -8.10465 1.93733    -4.18341  2.87168e-05  -11.9018  -4.30755
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.FB]                        0.430457 1.93733    0.222191     0.824165  -3.36664   4.22756
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.FB]                      2.43533 1.93733     1.25706     0.208734  -1.36177   6.23243
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.FB]                      -0.030494 1.93733  -0.0157402     0.987442  -3.82759   3.76661
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.FB]                       0.49284 1.93733    0.254391     0.799193  -3.30426   4.28994
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.FB]                         2.25951 1.93733      1.1663     0.243493  -1.53759   6.05661
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.FB]                         2.02992 1.93733     1.04779     0.294734  -1.76718   5.82702
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.FB]                    1.91405 1.93733    0.987982     0.323161  -1.88305   5.71115
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.FB]                    1.22525 1.93733    0.632443     0.527098  -2.57185   5.02235
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.FB]               0.0700725 1.93733   0.0361696     0.971147  -3.72703   3.86717
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.FB]                0.185257 1.93733   0.0956249     0.923818  -3.61184   3.98236
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.FB]                         -0.407948 1.93733   -0.210572     0.833221  -4.20505   3.38915
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.FB]                         -0.342962 1.93733   -0.177028     0.859486  -4.14006   3.45414
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.FB]                    -5.46795 1.93733    -2.82241   0.00476638  -9.26505  -1.67085
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.FB]                -5.34375 1.93733     -2.7583    0.0058102  -9.14085  -1.54665
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.FB]                         -3.35718 1.93733    -1.73289    0.0831155  -7.15428   0.43992
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.AM]    -3.18941 1.92121     -1.6601    0.0968936  -6.95492  0.576095
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.AM]             -6.91594 1.92121    -3.59978  0.000318489  -10.6814  -3.15043
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.AM]                      -4.78063 1.92121    -2.48834     0.012834  -8.54614  -1.01513
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.AM]                         5.85814 1.92121     3.04919   0.00229458   2.09264   9.62365
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.AM]                      2.12841 1.92121     1.10785     0.267927  -1.63709   5.89392
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.AM]                       0.494382 1.92121    0.257328     0.796925  -3.27112   4.25989
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.AM]                      0.917904 1.92121    0.477774     0.632811   -2.8476   4.68341
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.AM]                         1.52572 1.92121    0.794147      0.42711  -2.23978   5.29123
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.AM]                          1.6108 1.92121    0.838427     0.401791  -2.15471    5.3763
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.AM]                   0.400109 1.92121    0.208259     0.835027   -3.3654   4.16562
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.AM]                   0.555446 1.92121    0.289112     0.772496  -3.21006   4.32095
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.AM]               -0.321355 1.92121   -0.167267      0.86716  -4.08686   3.44415
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.AM]             -0.00288117 1.92121 -0.00149966     0.998803  -3.76839   3.76262
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.AM]                         -0.402703 1.92121   -0.209609     0.833973  -4.16821    3.3628
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.AM]                        -0.0946597 1.92121  -0.0492708     0.960703  -3.86017   3.67085
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.AM]                    -3.56623 1.92121    -1.85624     0.063419  -7.33174  0.199271
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.AM]                -3.54368 1.92121     -1.8445    0.0651098  -7.30919  0.221824
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.AM]                        -0.984693 1.92121   -0.512537     0.608275   -4.7502   2.78081
+C(metric_raw)[T.high_speed_running_distance_per_90]:C(position_group_primary)[T.CF]   -0.747527 2.42411   -0.308372     0.757799  -5.49869   4.00364
+C(metric_raw)[T.sprinting_distance_per_90]:C(position_group_primary)[T.CF]             -6.99311 2.42411    -2.88482   0.00391644  -11.7443  -2.24194
+C(metric_raw)[T.n_sprints_per_90]:C(position_group_primary)[T.CF]                      -4.86445 2.42411     -2.0067    0.0447821  -9.61562 -0.113283
+C(metric_raw)[T.CoD_low_per_90]:C(position_group_primary)[T.CF]                         8.13025 2.42411     3.35391  0.000796782   3.37908   12.8814
+C(metric_raw)[T.CoD_medium_per_90]:C(position_group_primary)[T.CF]                      2.71882 2.42411     1.12158     0.262042  -2.03234   7.46999
+C(metric_raw)[T.CoD_high_per_90]:C(position_group_primary)[T.CF]                        1.20726 2.42411     0.49802      0.61847  -3.54391   5.95842
+C(metric_raw)[T.CoD_total_per_90]:C(position_group_primary)[T.CF]                       1.61926 2.42411    0.667982     0.504145  -3.13191   6.37043
+C(metric_raw)[T.n_acc_3_per_90]:C(position_group_primary)[T.CF]                         2.06448 2.42411    0.851643     0.394412  -2.68669   6.81564
+C(metric_raw)[T.n_dec_3_per_90]:C(position_group_primary)[T.CF]                         2.14065 2.42411    0.883068     0.377199  -2.61051   6.89182
+C(metric_raw)[T.dist_acc_3_m_per_90]:C(position_group_primary)[T.CF]                    1.00507 2.42411    0.414614     0.678424   -3.7461   5.75624
+C(metric_raw)[T.dist_dec_3_m_per_90]:C(position_group_primary)[T.CF]                    1.15855 2.42411    0.477926     0.632703  -3.59262   5.90971
+C(metric_raw)[T.mean_acc_magnitude_ms2]:C(position_group_primary)[T.CF]               -0.397298 2.42411   -0.163895     0.869814  -5.14847   4.35387
+C(metric_raw)[T.mean_dec_magnitude_ms2]:C(position_group_primary)[T.CF]               -0.117641 2.42411  -0.0485294     0.961294  -4.86881   4.63353
+C(metric_raw)[T.peak_acc_ms2]:C(position_group_primary)[T.CF]                       -0.00363927 2.42411 -0.00150128     0.998802  -4.75481   4.74753
+C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CF]                          0.138328 2.42411   0.0570633     0.954495  -4.61284   4.88949
+C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CF]                    -2.64847 2.42411    -1.09255      0.27459  -7.39963    2.1027
+C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CF]                -2.78153 2.42411    -1.14744     0.251198   -7.5327   1.96964
+C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                         -1.80586 2.42411   -0.744959     0.456296  -6.55703    2.9453
+
+====================================================================================================
+4. LIKELIHOOD-RATIO TESTS (ML fits)
+====================================================================================================
+M1 -> M2 (position main effect): chi2 = 4.11533, df = 4, p = 0.390622
+M2 -> M3 (metric x position interaction): chi2 = 310.532, df = 72, p = 2.25022e-31
+
+====================================================================================================
+5. TUKEY HSD PER METRIC (within-player CV%, all 10 position pairs, family-wise alpha = .05)
+====================================================================================================
+meandiff = mean(group2) - mean(group1). Figure 1 and Table S3 show Position - CM.
+
+--- TD (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2   meandiff       SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB -0.0525093 0.158865 0.330527  -0.67336  0.568341 0.999332   False
+    AM     CF   0.226725  0.20037  1.13153 -0.556327   1.00978 0.930176   False
+    AM     CM  -0.329127 0.156615  2.10151 -0.941182  0.282929 0.573272   False
+    AM     FB  -0.140503 0.161368 0.870699 -0.771136   0.49013 0.972398   False
+    CB     CF   0.279234 0.199399  1.40038 -0.500022   1.05849 0.859366   False
+    CB     CM  -0.276617  0.15537  1.78038 -0.883809  0.330574 0.716676   False
+    CB     FB -0.0879939 0.160161  0.54941 -0.713908   0.53792  0.99513   False
+    CF     CM  -0.555852  0.19761  2.81287  -1.32812  0.216416 0.276714   False
+    CF     FB  -0.367228 0.201399  1.82339   -1.1543  0.419844 0.698205   False
+    CM     FB   0.188623 0.157929  1.19436 -0.428567  0.805814 0.916152   False
+
+--- HSRD (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE         q  lower_95   upper_95       p_adj  reject
+    AM     CB   5.35016 0.640842   8.34864   2.84573     7.8546 2.51926e-07    True
+    AM     CF   2.66861 0.808267   3.30164 -0.490125    5.82734     0.14016   False
+    AM     CM   2.86028 0.631764   4.52746  0.391329    5.32924   0.0143719    True
+    AM     FB   2.70704  0.65094   4.15867  0.163146    5.25094   0.0308759    True
+    CB     CF  -2.68155 0.804349   3.33382  -5.82498   0.461868    0.133372   False
+    CB     CM  -2.48988 0.626744   3.97272  -4.93921 -0.0405438   0.0442838    True
+    CB     FB  -2.64312 0.646069   4.09108  -5.16798  -0.118264     0.03527    True
+    CF     CM  0.191676 0.797135  0.240456  -2.92355    3.30691    0.999811   False
+    CF     FB 0.0384328 0.812417 0.0473067  -3.13652    3.21338           1   False
+    CM     FB -0.153243 0.637065  0.240545  -2.64291    2.33643     0.99981   False
+
+--- SpD (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE         q  lower_95  upper_95      p_adj  reject
+    AM     CB   7.48631 2.18417   3.42753  -1.04951   16.0221   0.115037   False
+    AM     CF  0.149554  2.7548 0.0542886  -10.6163   10.9154          1   False
+    AM     CM   6.58681 2.15323   3.05903  -1.82809   15.0017   0.199933   False
+    AM     FB   -4.8202 2.21859   2.17264  -13.4905   3.85012   0.540766   False
+    CB     CF  -7.33676 2.74145   2.67623  -18.0504   3.37692   0.326205   False
+    CB     CM -0.899504 2.13612  0.421092  -9.24754   7.44853   0.998269   False
+    CB     FB  -12.3065 2.20199   5.58882   -20.912  -3.70108 0.00114004    True
+    CF     CM   6.43726 2.71686   2.36937  -4.18034   17.0548    0.45245   False
+    CF     FB  -4.96976 2.76895   1.79482  -15.7909   5.85139   0.710513   False
+    CM     FB   -11.407  2.1713   5.25354  -19.8925   -2.9215 0.00266895    True
+
+--- Sp-count (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE         q  lower_95  upper_95    p_adj  reject
+    AM     CB   2.74826 2.81899  0.974908  -8.26846    13.765 0.958505   False
+    AM     CF  0.142909 3.55548 0.0401939   -13.752   14.0378        1   False
+    AM     CM   4.45151 2.77906    1.6018  -6.40915   15.3122 0.788981   False
+    AM     FB  -3.46452 2.86341   1.20993  -14.6548   7.72579 0.912437   False
+    CB     CF  -2.60535 3.53824   0.73634  -16.4329   11.2222 0.985151   False
+    CB     CM   1.70325 2.75698  0.617796   -9.0711   12.4776 0.992359   False
+    CB     FB  -6.21278 2.84198   2.18607  -17.3193   4.89378 0.534645   False
+    CF     CM    4.3086 3.50651   1.22874  -9.39495   18.0121  0.90782   False
+    CF     FB  -3.60743 3.57373   1.00943  -17.5737   10.3588 0.953054   False
+    CM     FB  -7.91603 2.80238   2.82476  -18.8678   3.03575 0.272633   False
+
+--- CoD-low (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95   upper_95      p_adj  reject
+    AM     CB  -7.72816 1.39888  5.52453   -13.195   -2.26129 0.00134655    True
+    AM     CF   2.49883 1.76435  1.41629   -4.3963    9.39395   0.854313   False
+    AM     CM  -6.18727 1.37906  4.48658  -11.5767   -0.79785  0.0156924    True
+    AM     FB  -5.56819 1.42092  3.91872  -11.1212 -0.0151836  0.0490145    True
+    CB     CF    10.227 1.75579  5.82471   3.36528    17.0887 0.00061076    True
+    CB     CM   1.54089  1.3681  1.12629  -3.80571    6.88748   0.931276   False
+    CB     FB   2.15997 1.41029  1.53158  -3.35148    7.67142   0.815036   False
+    CF     CM   -8.6861 1.74005  4.99188  -15.4863   -1.88594 0.00502439    True
+    CF     FB  -8.06702 1.77341  4.54888  -14.9975   -1.13649  0.0137205    True
+    CM     FB  0.619081 1.39063 0.445179  -4.81556    6.05372   0.997848   False
+
+--- CoD-med (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB  -1.07745 0.751981  1.43282  -4.01622   1.86132 0.848966   False
+    AM     CF  0.817137 0.948442 0.861557  -2.88941   4.52368 0.973441   False
+    AM     CM  -2.45754 0.741329  3.31505  -5.35468  0.439596   0.1373   False
+    AM     FB  0.166416  0.76383  0.21787  -2.81866   3.15149 0.999872   False
+    CB     CF   1.89459 0.943844  2.00731  -1.79399   5.58316 0.616256   False
+    CB     CM  -1.38009 0.735438  1.87655   -4.2542   1.49403 0.674945   False
+    CB     FB   1.24387 0.758114  1.64074  -1.71887    4.2066 0.773906   False
+    CF     CM  -3.27468 0.935379  3.50091  -6.93017  0.380816 0.102109   False
+    CF     FB -0.650721 0.953311  0.68259  -4.37629   3.07485 0.988837   False
+    CM     FB   2.62396 0.747549  3.51008 -0.297489    5.5454 0.100578   False
+
+--- CoD-high (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE        q  lower_95  upper_95     p_adj  reject
+    AM     CB -0.219421 0.396568 0.553299  -1.76922   1.33038  0.994995   False
+    AM     CF  0.939599 0.500174  1.87854   -1.0151    2.8943  0.674066   False
+    AM     CM -0.823509  0.39095  2.10643  -2.35136  0.704338  0.571021   False
+    AM     FB -0.665379 0.402817  1.65182   -2.2396  0.908842  0.769542   False
+    CB     CF   1.15902  0.49775  2.32852 -0.786203   3.10424  0.470474   False
+    CB     CM -0.604088 0.387844  1.55755  -2.11979  0.911618  0.805575   False
+    CB     FB -0.445958 0.399802  1.11545   -2.0084   1.11648  0.933518   False
+    CF     CM  -1.76311 0.493286  3.57421  -3.69088  0.164669 0.0903782   False
+    CF     FB  -1.60498 0.502743  3.19245  -3.56971  0.359756  0.165151   False
+    CM     FB  0.158129 0.394231 0.401109  -1.38254    1.6988  0.998569   False
+
+--- CoD-total (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE        q  lower_95  upper_95     p_adj  reject
+    AM     CB -0.375628 0.497431 0.755135  -2.31961   1.56835  0.983684   False
+    AM     CF  0.928082 0.627389  1.47928  -1.52377   3.37994  0.833419   False
+    AM     CM  -1.24703 0.490385  2.54297  -3.16347  0.669408   0.37875   False
+    AM     FB -0.565567 0.505269  1.11934  -2.54018   1.40904  0.932719   False
+    CB     CF   1.30371 0.624348  2.08811  -1.13626   3.74368  0.579396   False
+    CB     CM -0.871403 0.486488  1.79121  -2.77261   1.02981  0.712054   False
+    CB     FB  -0.18994 0.501488 0.378752  -2.14977   1.76989  0.998858   False
+    CF     CM  -2.17511 0.618748  3.51535   -4.5932  0.242975 0.0997069   False
+    CF     FB  -1.49365  0.63061  2.36858  -3.95809  0.970796  0.452798   False
+    CM     FB  0.681464 0.494499  1.37809  -1.25106   2.61398  0.866292   False
+
+--- Acc-count (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB  -1.45566 1.20375  1.20927  -6.15997   3.24864 0.912595   False
+    AM     CF  0.765476 1.51824 0.504186  -5.16786   6.69881 0.996507   False
+    AM     CM  -1.85485  1.1867  1.56303  -6.49251   2.78281 0.803553   False
+    AM     FB  0.593283 1.22272 0.485216  -4.18515   5.37171  0.99699   False
+    CB     CF   2.22114 1.51088  1.47009  -3.68344   8.12571 0.836551   False
+    CB     CM -0.399188 1.17727 0.339079        -5   4.20162 0.999261   False
+    CB     FB   2.04895 1.21357  1.68836  -2.69372   6.79161 0.754912   False
+    CF     CM  -2.62033 1.49733     1.75  -8.47195   3.23129 0.729504   False
+    CF     FB -0.172194 1.52604 0.112837  -6.13599   5.79161 0.999991   False
+    CM     FB   2.44813 1.19666  2.04581  -2.22844   7.12471 0.598722   False
+
+--- Dec-count (n) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB  -1.21799 1.23167 0.988887   -6.0314   3.59543  0.95635   False
+    AM     CF  0.756583 1.55346 0.487032  -5.31437   6.82754 0.996946   False
+    AM     CM  -1.93992 1.21422  1.59766  -6.68515   2.80531 0.790558   False
+    AM     FB  0.278621 1.25108 0.222705  -4.61064   5.16788  0.99986   False
+    CB     CF   1.97457 1.54593  1.27727  -4.06696    8.0161 0.895271   False
+    CB     CM -0.721938 1.20458  0.59933  -5.42946   3.98558 0.993196   False
+    CB     FB   1.49661 1.24172  1.20527  -3.35607   6.34928 0.913558   False
+    CF     CM  -2.69651 1.53206  1.76005  -8.68385   3.29084  0.72528   False
+    CF     FB -0.477962 1.56143 0.306105  -6.58009   5.62416 0.999507   False
+    CM     FB   2.21854 1.22441  1.81193   -2.5665   7.00359 0.703161   False
+
+--- Acc-dist (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB   -1.1074 1.32485  0.83587  -6.28498   4.07017 0.976229   False
+    AM     CF  0.831687 1.67098 0.497724  -5.69856   7.36194 0.996677   False
+    AM     CM -0.729236 1.30609 0.558337  -5.83346   4.37499 0.994817   False
+    AM     FB   1.37344 1.34573  1.02059  -3.88572   6.63259 0.951198   False
+    CB     CF   1.93909 1.66288   1.1661   -4.5595   8.43769 0.922651   False
+    CB     CM  0.378169 1.29571 0.291863  -4.68549   5.44183 0.999592   False
+    CB     FB   2.48084 1.33566  1.85739  -2.73895   7.70064 0.683378   False
+    CF     CM  -1.56092 1.64797 0.947181  -8.00123   4.87939 0.962571   False
+    CF     FB  0.541751 1.67956 0.322555  -6.02203   7.10553 0.999393   False
+    CM     FB   2.10267 1.31704  1.59651  -3.04438   7.24972 0.790997   False
+
+--- Dec-dist (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE         q  lower_95  upper_95    p_adj  reject
+    AM     CB -0.982449 1.12206  0.875573  -5.36751   3.40261  0.97183   False
+    AM     CF  0.829826 1.41521  0.586362  -4.70086   6.36051 0.993743   False
+    AM     CM -0.884572 1.10617  0.799673  -5.20751   3.43837  0.97981   False
+    AM     FB  0.529302 1.13974  0.464405  -3.92485   4.98346 0.997462   False
+    CB     CF   1.81227 1.40835   1.28681   -3.6916   7.31615 0.892697   False
+    CB     CM 0.0978768 1.09738 0.0891916  -4.19071   4.38647 0.999996   False
+    CB     FB   1.51175 1.13121    1.3364  -2.90907   5.93257 0.878746   False
+    CF     CM   -1.7144 1.39572   1.22833  -7.16891   3.74012 0.907924   False
+    CF     FB -0.300524 1.42248  0.211268  -5.85961   5.25856 0.999887   False
+    CM     FB   1.41387 1.11545   1.26754  -2.94534   5.77309 0.897862   False
+
+--- Acc-avg (m·s⁻²) ---
+q critical: 3.90803   df (residual): 141
+group1 group2    meandiff       SE         q  lower_95  upper_95    p_adj  reject
+    AM     CB   -0.104643 0.218986  0.477852 -0.960449  0.751163 0.997164   False
+    AM     CF    0.150782 0.276198  0.545919  -0.92861   1.23017 0.995248   False
+    AM     CM -0.00777166 0.215884 0.0359992 -0.851454  0.835911        1   False
+    AM     FB    0.250924 0.222437   1.12807 -0.618367   1.12022 0.930904   False
+    CB     CF    0.255425 0.274859  0.929293 -0.818735   1.32958 0.965049   False
+    CB     CM   0.0968714 0.214169  0.452313 -0.740107   0.93385  0.99771   False
+    CB     FB    0.355567 0.220772   1.61056 -0.507218   1.21835 0.785628   False
+    CF     CM   -0.158553 0.272394  0.582073  -1.22308  0.905972 0.993917   False
+    CF     FB    0.100142 0.277616  0.360723 -0.984791   1.18508 0.999057   False
+    CM     FB    0.258696 0.217696   1.18834 -0.592066   1.10946 0.917563   False
+
+--- Dec-avg (m·s⁻²) ---
+q critical: 3.90803   df (residual): 141
+group1 group2   meandiff       SE        q  lower_95  upper_95    p_adj  reject
+    AM     CB  -0.361957 0.157948  2.29162 -0.979223  0.255309 0.486924   False
+    AM     CF   0.111966 0.199213  0.56204 -0.666566  0.890497 0.994684   False
+    AM     CM  -0.326245 0.155711   2.0952 -0.934767  0.282277 0.576154   False
+    AM     FB  0.0476351 0.160437 0.296909 -0.579357  0.674627 0.999563   False
+    CB     CF   0.473923 0.198247  2.39056 -0.300835   1.24868  0.44319   False
+    CB     CM  0.0357115 0.154473 0.231182 -0.567975  0.639398 0.999838   False
+    CB     FB   0.409592 0.159236  2.57223 -0.212708   1.03189 0.366879   False
+    CF     CM  -0.438211 0.196469  2.23043  -1.20602  0.329598 0.514492   False
+    CF     FB -0.0643306 0.200236 0.321274 -0.846859  0.718198 0.999403   False
+    CM     FB   0.373881 0.157017  2.38115 -0.239747  0.987508 0.447296   False
+
+--- Acc-peak (m·s⁻²) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE        q  lower_95  upper_95     p_adj  reject
+    AM     CB  0.382455 0.172897  2.21204 -0.293233   1.05814  0.522834   False
+    AM     CF  0.625789 0.218068   2.8697 -0.226427   1.47801  0.257542   False
+    AM     CM 0.0735767 0.170448 0.431667 -0.592539  0.739693  0.998092   False
+    AM     FB -0.145748 0.175621 0.829899 -0.832082  0.540586  0.976848   False
+    CB     CF  0.243334 0.217011   1.1213 -0.604751   1.09142  0.932314   False
+    CB     CM -0.308878 0.169093  1.82667 -0.969701  0.351944  0.696781   False
+    CB     FB -0.528203 0.174307   3.0303   -1.2094  0.152995  0.208051   False
+    CF     CM -0.552212 0.215064  2.56766  -1.39269  0.288266   0.36872   False
+    CF     FB -0.771537 0.219187  3.51999  -1.62813 0.0850544 0.0989441   False
+    CM     FB -0.219325 0.171878  1.27605  -0.89103   0.45238  0.895598   False
+
+--- Dec-peak (m·s⁻²) ---
+q critical: 3.90803   df (residual): 141
+group1 group2   meandiff       SE        q  lower_95   upper_95      p_adj  reject
+    AM     CB -0.0260469 0.122488 0.212648 -0.504734   0.452641   0.999884   False
+    AM     CF   0.459713 0.154489   2.9757 -0.144035    1.06346   0.224094   False
+    AM     CM  -0.234467 0.120753  1.94171 -0.706373    0.23744   0.645913   False
+    AM     FB  -0.388805 0.124418  3.12499 -0.875035  0.0974249   0.182143   False
+    CB     CF    0.48576  0.15374  3.15961 -0.115062    1.08658   0.173271   False
+    CB     CM   -0.20842 0.119793  1.73983 -0.676576   0.259736   0.733756   False
+    CB     FB  -0.362758 0.123487  2.93762  -0.84535   0.119833    0.23576   False
+    CF     CM  -0.694179 0.152361  4.55614  -1.28961 -0.0987466   0.013506    True
+    CF     FB  -0.848518 0.155282  5.46436  -1.45537   -0.24167 0.00157135    True
+    CM     FB  -0.154338 0.121766   1.2675 -0.630204   0.321527   0.897872   False
+
+--- Mean sprint dist (m) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95  upper_95       p_adj  reject
+    AM     CB    7.3163 1.10141  6.64268   3.01196   11.6206 6.02721e-05    True
+    AM     CF   1.14449 1.38916 0.823875  -4.28439   6.57337     0.97746   False
+    AM     CM   3.23711 1.08581   2.9813  -1.00626   7.48047    0.222412   False
+    AM     FB  -2.04222 1.11876  1.82542  -6.41438   2.32994    0.697323   False
+    CB     CF   -6.1718 1.38243  4.46448  -11.5744  -0.76924    0.016451    True
+    CB     CM  -4.07919 1.07718  3.78693  -8.28883  0.130454   0.0623987   False
+    CB     FB  -9.35852 1.11039  8.42813   -13.698  -5.01907 1.91643e-07    True
+    CF     CM   2.09261 1.37003  1.52743  -3.26149   7.44672    0.816528   False
+    CF     FB  -3.18671 1.39629  2.28227  -8.64346   2.27004    0.491115   False
+    CM     FB  -5.27933 1.09492  4.82167  -9.55829  -1.00036  0.00746638    True
+
+--- Mean sprint dur (s) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff      SE        q  lower_95  upper_95       p_adj  reject
+    AM     CB   7.12491 1.07481  6.62897    2.9245   11.3253 6.27703e-05    True
+    AM     CF  0.988877 1.35562 0.729467  -4.30891   6.28667    0.985664   False
+    AM     CM   3.21456 1.05959  3.03378 -0.926347   7.35546    0.207055   False
+    AM     FB  -1.94057 1.09175  1.77749  -6.20716   2.32602    0.717902   False
+    CB     CF  -6.13603 1.34904  4.54843  -11.4081 -0.863922   0.0137341    True
+    CB     CM  -3.91036 1.05117  3.72001  -8.01835  0.197641   0.0702925   False
+    CB     FB  -9.06548 1.08358  8.36624  -13.3001  -4.83082 2.37151e-07    True
+    CF     CM   2.22568 1.33695  1.66475  -2.99915    7.4505    0.764404   False
+    CF     FB  -2.92945 1.36258  2.14994  -8.25444   2.39554    0.551131   False
+    CM     FB  -5.15513 1.06848  4.82474  -9.33077 -0.979482  0.00741407    True
+
+--- Peak speed (m·s⁻¹) ---
+q critical: 3.90803   df (residual): 141
+group1 group2  meandiff       SE        q  lower_95  upper_95       p_adj  reject
+    AM     CB  -2.36348 0.270977  8.72207  -3.42246  -1.30449 6.88428e-08    True
+    AM     CF -0.594445 0.341771  1.73931   -1.9301  0.741208    0.733973   False
+    AM     CM  0.655566 0.267138  2.45403 -0.388418   1.69955    0.415858   False
+    AM     FB  -2.51299 0.275247  9.12996  -3.58866  -1.43732  1.6123e-08    True
+    CB     CF   1.76903 0.340115  5.20128  0.439853   3.09821   0.0030352    True
+    CB     CM   3.01904 0.265015   11.392   1.98336   4.05473 3.00771e-12    True
+    CB     FB -0.149513 0.273187 0.547293  -1.21714  0.918109    0.995202   False
+    CF     CM   1.25001 0.337064  3.70853 -0.067247   2.56727   0.0717278   False
+    CF     FB  -1.91855 0.343526  5.58486  -3.26106 -0.576034  0.00115185    True
+    CM     FB  -3.16856 0.269379  11.7624   -4.2213  -2.11581   6.809e-13    True

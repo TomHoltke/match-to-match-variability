@@ -1,6 +1,6 @@
 """Detailed playing position of each starter, from the team's starting formation.
 
-The event data (Opta f7) give each team's formation (e.g. "4231") and each
+The Opta line-up file (f7) gives each team's formation (e.g. "4231") and each
 starter's ``formation_place`` (1 to 11). The tables below translate that pair
 into a position label such as "Right Center Back". Substitutes get no
 position (None, written as "unknown" in the feature table). A player's

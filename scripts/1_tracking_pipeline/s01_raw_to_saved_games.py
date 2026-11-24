@@ -1,11 +1,13 @@
-"""Step 1: raw tracking and event data -> one preprocessed saved game per match.
+"""Step 1: raw tracking data -> one preprocessed saved game per match.
 
 Needs the private raw data and the optional ``tracking`` dependencies. Not
 needed to reproduce the manuscript results (start at step 4 for that).
 
 Reads  : RAW_TRACKING_DIR, per match four files with the same stem:
              <stem>.dat, <stem> metadata.xml   (TRACAB tracking, 25 Hz)
-             <stem> f24.xml, <stem> f7.xml      (Opta events and line-ups)
+             <stem> f7.xml                      (Opta line-ups: formation)
+             <stem> f24.xml                     (Opta events: read by DataBallPy
+                                                 with the line-ups, not used)
          MATCH_LIST_FILE: which matches to process (included = 1), and the
              name of each saved game (it carries the matchday as "MDxx")
 Writes : SAVED_GAMES_DIR/<saved_game_name>/   (DataBallPy saved game)

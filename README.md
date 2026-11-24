@@ -159,9 +159,11 @@ repository.
 ## 6. From raw tracking data to the shared input (steps 1 to 3)
 
 The shared input was made from the raw optical tracking data (TRACAB, 25 Hz)
-and event data (Opta) with the code in `scripts/1_tracking_pipeline/` and
+with the code in `scripts/1_tracking_pipeline/` and
 `src/match_variability/tracking/`. **The raw data cannot be shared** (licensed
-from the data provider, and identifiable). The code is included so that every
+from the data provider, and identifiable). No event data were used: the only
+other input is the line-up file (Opta f7), for each starter's position in the
+starting formation. The code is included so that every
 processing step is open to inspection, and so that the complete pipeline can be
 rerun on request by anyone who is given access to the raw data under the data
 provider's terms.

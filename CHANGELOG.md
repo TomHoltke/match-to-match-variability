@@ -5,6 +5,9 @@ here, newest first. Each submitted version is tagged in git (`v1.0.0`, ...).
 
 ## Unreleased
 
+- Documentation: no event data were used. Only the Opta line-up file (f7) is
+  used, for playing positions; the event file (f24) is read by DataBallPy
+  but not used. No change to code or results.
 - Shared data: `shirt_num` and `column_id` (`home_<shirt>`) removed from all
   files in `data/shared/` (step 3), because with the public fixture list the
   shirt number could identify players. Not used by the analysis; all tables

@@ -1,6 +1,6 @@
 # Tracking pipeline: from raw tracking data to the shared input (steps 1 to 3)
 
-These steps need the raw tracking and event data, which are not shared (see
+These steps need the raw tracking data, which are not shared (see
 README, section 6). They are documented here so that every processing choice
 can be checked, and so that the pipeline can be rerun by anyone given access to
 the raw data.
@@ -23,8 +23,9 @@ data/shared/match_player_features.csv (shared)  ->  steps 4 and 5 (README, secti
 One full season of a European top-tier league: 18 clubs, 34 matchdays, 306
 matches. Per match the data provider delivered four files with the same name
 stem: TRACAB optical tracking (`<stem>.dat`, `<stem> metadata.xml`; 25 Hz,
-4th generation) and Opta event data and line-ups (`<stem> f24.xml`,
-`<stem> f7.xml`).
+4th generation) and Opta line-ups (`<stem> f7.xml`, starting formation of each
+team). The Opta event file (`<stem> f24.xml`) was also delivered and is read by
+DataBallPy when a match is loaded, but no event is used in any metric.
 
 | | Matches |
 |---|---|
@@ -42,8 +43,9 @@ process matches with `included = 1`, so a rerun uses exactly the same 280 matche
 
 Per match:
 
-1. **Load** tracking and event data with DataBallPy 0.7.2 (`get_game`,
-   provider `tracab` and `opta`).
+1. **Load** the match with DataBallPy 0.7.2 (`get_game`, provider `tracab` for
+   tracking and `opta` for the line-ups; DataBallPy reads the f24 file together
+   with the line-ups, but the events are not used).
 2. **Player kinematics** (`tracking/kinematics.py`), per player:
    - zero-lag 4th-order Butterworth low-pass filter, 1 Hz cut-off, on x and y
      (gaps are bridged by linear interpolation for filtering only and set back
@@ -55,7 +57,8 @@ Per match:
      ±10 m/s² are set to missing.
 3. **Ball** (not used in the analysis): DataBallPy's Savitzky-Golay filters.
 4. **Playing position** (`tracking/positions.py`): each starter's detailed
-   position from the team's formation and the player's place in it (Opta f7).
+   position from the team's formation and the player's place in it (Opta f7
+   line-up).
    Substitutes get no position.
 5. **Save** with DataBallPy (`save_game`), one folder per match.
 

@@ -6,7 +6,7 @@
 # Folder with the private data: match_list.csv, features_identified/, keys/
 PRIVATE_DIR = "data/private"
 
-# Raw tracking and event files: <stem>.dat, <stem> metadata.xml, <stem> f24.xml, <stem> f7.xml
+# Raw files: <stem>.dat, <stem> metadata.xml (tracking), <stem> f7.xml (line-ups), <stem> f24.xml (read by DataBallPy, unused)
 RAW_TRACKING_DIR = "data/private/raw_tracking"
 
 # One DataBallPy saved game per match (made by step 1)

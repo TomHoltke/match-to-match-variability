@@ -58,7 +58,7 @@ def _private_paths() -> dict[str, Path]:
 
 _P = _private_paths()
 PRIVATE_DIR = _P["PRIVATE_DIR"]
-RAW_TRACKING_DIR = _P["RAW_TRACKING_DIR"]      # TRACAB .dat + metadata.xml, Opta f24.xml + f7.xml
+RAW_TRACKING_DIR = _P["RAW_TRACKING_DIR"]      # TRACAB .dat + metadata.xml, Opta f7.xml (line-ups); f24.xml read, unused
 SAVED_GAMES_DIR = _P["SAVED_GAMES_DIR"]        # one DataBallPy saved game per match (step 1)
 
 # Which raw matches go in, their saved-game name and matchday (see docs/tracking_pipeline.md).

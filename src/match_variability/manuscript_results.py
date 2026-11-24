@@ -10,7 +10,7 @@ Produces the outputs that go into the manuscript:
     Table S3  — Per-metric Tukey HSD contrasts vs CM (supplement)
 
 Everything is written to ``results/manuscript/``:
-    Figure1_forest_position_vs_CM.png
+    Figure1_forest_position_vs_CM.png   (1200 dpi)
     Table1.csv  TableS1.csv  TableS2.csv  TableS3.csv
     Manuscript_tables_and_figure.docx
 
@@ -452,7 +452,11 @@ def run() -> None:
     for _, r in forest.iterrows():
         y = y_pos[r["Metric"]] + offsets[r["Position"]]
         col = PALETTE[r["Position"]]
-        ax.plot([r["ci_l"], r["ci_h"]], [y, y], color=col, lw=1.6, alpha=0.85, zorder=2)
+        # butt caps: the bar ends exactly at the CI limits (matplotlib's default
+        # "projecting" cap extends it by half a line width, so a CI ending just
+        # above zero, e.g. HSRD CB-CM lower limit +0.04, looked as if it crossed zero)
+        ax.plot([r["ci_l"], r["ci_h"]], [y, y], color=col, lw=1.6, alpha=0.85, zorder=2,
+                solid_capstyle="butt")
         ax.scatter(r["beta"], y, s=46,
                    facecolor=col if r["sig"] else "white",
                    edgecolor=col, linewidth=1.6, zorder=3)
@@ -471,12 +475,16 @@ def run() -> None:
         ax.text(TEXT_X, (first + last) / 2, fam, transform=trans, rotation=90,
                 va="center", ha="center", fontsize=10, color="#444", clip_on=False)
 
-    leg_p = [Line2D([0], [0], marker="o", color="w", markerfacecolor=PALETTE[p],
+    # Legend keys drawn like the plot marks: a CI bar in the same colour as the dot
+    leg_p = [Line2D([0], [0], marker="o", color=PALETTE[p], lw=1.6, alpha=0.85,
+                    solid_capstyle="butt", markerfacecolor=PALETTE[p],
                     markeredgecolor=PALETTE[p], markersize=9, label=p) for p in CONTRAST]
-    leg_s = [Line2D([0], [0], marker="o", color="w", markerfacecolor="grey",
-                    markeredgecolor="grey", markersize=9, label="p < 0.05"),
-             Line2D([0], [0], marker="o", color="w", markerfacecolor="white",
-                    markeredgecolor="grey", markersize=9, label="n.s.")]
+    leg_s = [Line2D([0], [0], marker="o", color="grey", lw=1.6, solid_capstyle="butt",
+                    markerfacecolor="grey", markeredgecolor="grey", markersize=9,
+                    label="p < 0.05"),
+             Line2D([0], [0], marker="o", color="grey", lw=1.6, solid_capstyle="butt",
+                    markerfacecolor="white", markeredgecolor="grey", markersize=9,
+                    label="n.s.")]
     leg1 = ax.legend(handles=leg_p, title="Position", loc="upper right", frameon=False)
     ax.add_artist(leg1)
     ax.legend(handles=leg_s, loc="lower right", frameon=False)
@@ -485,9 +493,9 @@ def run() -> None:
     ax.set_axisbelow(True)
     plt.subplots_adjust(left=0.30)
     fig_png = OUT / "Figure1_forest_position_vs_CM.png"
-    fig.savefig(fig_png, dpi=600, bbox_inches="tight", metadata={"Software": None})
+    fig.savefig(fig_png, dpi=1200, bbox_inches="tight", metadata={"Software": None})
     plt.close(fig)
-    print("Saved Figure 1 (png 600 dpi)")
+    print("Saved Figure 1 (png 1200 dpi)")
 
     # ----- Word document -----
     doc = Document()

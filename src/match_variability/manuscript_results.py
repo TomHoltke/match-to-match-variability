@@ -127,6 +127,19 @@ def model_var(m):
     return vp, vr, vp / (vp + vr)
 
 
+def r2_mixed(m):
+    """Marginal and conditional R² (Nakagawa & Schielzeth, 2013).
+
+    σ²fixed is the variance of the fixed-effect predictions Xβ over the fitted data;
+    marginal R² = σ²fixed / (σ²fixed + σ²Player + σ²Resid) (fixed effects only),
+    conditional R² = (σ²fixed + σ²Player) / (same)        (fixed + random effects).
+    """
+    vf = float(np.var(m.model.exog @ m.fe_params.to_numpy()))
+    vp, vr, _ = model_var(m)
+    total = vf + vp + vr
+    return vf / total, (vf + vp) / total
+
+
 def lrt(small, big):
     # log-likelihoods are not comparable across different fixed effects.
     # Δdf counts fixed effects only (k_fe); the random-effect variance
@@ -362,13 +375,29 @@ def statistical_report(df, obs, n_matches, fits, fit_warnings, lrts, tukey_objs,
                  f"fixed effects k: {m.k_fe}")
         L.append(f"Log-likelihood: {_g(m.llf)}" +
                  ("" if m.reml else f"   AIC: {_g(m.aic)}   BIC: {_g(m.bic)}"))
+        r2m, r2c = r2_mixed(m)
         L.append(f"Variance player (random intercept): {_g(vp)}   Residual variance: {_g(vr)}   "
                  f"ICC: {_g(icc)}")
+        L.append(f"Marginal R2 (fixed effects): {_g(r2m)}   Conditional R2 (fixed + random): {_g(r2c)}")
         w = fit_warnings.get(label, [])
         L.append("Warnings during fitting: " + ("; ".join(w) if w else "none"))
         L += ["", "statsmodels summary:", m.summary().as_text(), "",
               "Fixed effects, unrounded (Wald z tests, 95% CI):",
               fixed_effects_table(m).to_string(**fmt)]
+
+    # ---- 3b. Explained variance ----
+    _section(L, "3b. EXPLAINED VARIANCE (Nakagawa & Schielzeth 2013 R2, REML fits)")
+    L.append("Marginal R2 = var(fixed predictions) / (var(fixed predictions) + var player + var residual);")
+    L.append("conditional R2 adds the player variance to the numerator. Delta = change vs the prior model.")
+    rows, prev = [], None
+    for label, m in fits.items():
+        if not m.reml:
+            continue
+        r2m, r2c = r2_mixed(m)
+        rows.append({"model": label, "marginal_R2": r2m, "conditional_R2": r2c,
+                     "delta_marginal_R2": float("nan") if prev is None else r2m - prev})
+        prev = r2m
+    L.append(pd.DataFrame(rows).to_string(index=False, na_rep="-", **fmt))
 
     # ---- 4. Likelihood-ratio tests ----
     _section(L, "4. LIKELIHOOD-RATIO TESTS (ML fits)")
@@ -545,23 +574,26 @@ def run() -> None:
                 s1_rows.append({"kind": "data", "cells": cells})
 
     # ----- Table S2 -----
-    S2_COLS = ["Model", "k", "LogLik", "σ²Player", "σ²Resid", "ICC", "Δdf", "LRT χ², p (vs prior)"]
+    S2_COLS = ["Model", "k", "LogLik", "σ²Player", "σ²Resid", "ICC", "R²m", "R²c", "Δdf",
+               "LRT χ², p (vs prior)"]
     v1p, v1r, icc1 = model_var(m1)
     v2p, v2r, icc2 = model_var(m2)
     v3p, v3r, icc3 = model_var(m3)
+    (r2m1, r2c1), (r2m2, r2c2), (r2m3, r2c3) = r2_mixed(m1), r2_mixed(m2), r2_mixed(m3)
     # [REVIEW FIX 2026-10-16] LRT + LogLik from ML fits; k = fixed effects only
     # (was len(params), which also counted the random-intercept variance).
     chi12, ddf12, p12 = lrt(m1_ml, m2_ml)
     chi23, ddf23, p23 = lrt(m2_ml, m3_ml)
     s2_rows = [
         {"kind": "data", "cells": ["M1: CV% ~ Metric + (1|Player)", str(m1_ml.k_fe),
-                                   f"{m1_ml.llf:.1f}", f"{v1p:.2f}", f"{v1r:.2f}", f"{icc1:.3f}", "—", "—"]},
+                                   f"{m1_ml.llf:.1f}", f"{v1p:.2f}", f"{v1r:.2f}", f"{icc1:.3f}",
+                                   f"{r2m1:.3f}", f"{r2c1:.3f}", "—", "—"]},
         {"kind": "data", "cells": ["M2: M1 + Position main effect", str(m2_ml.k_fe),
                                    f"{m2_ml.llf:.1f}", f"{v2p:.2f}", f"{v2r:.2f}", f"{icc2:.3f}",
-                                   str(ddf12), lrt_str(chi12, p12)]},
+                                   f"{r2m2:.3f}", f"{r2c2:.3f}", str(ddf12), lrt_str(chi12, p12)]},
         {"kind": "data", "cells": ["M3: M2 + Metric × Position", str(m3_ml.k_fe),
                                    f"{m3_ml.llf:.1f}", f"{v3p:.2f}", f"{v3r:.2f}", f"{icc3:.3f}",
-                                   str(ddf23), lrt_str(chi23, p23)]},
+                                   f"{r2m3:.3f}", f"{r2c3:.3f}", str(ddf23), lrt_str(chi23, p23)]},
     ]
 
     # ----- Table S3 -----
@@ -707,11 +739,13 @@ def run() -> None:
                 f"fitted on within-player CV% values (n = {n_obs:,}; {n_players} players × {len(METRICS)} "
                 "metrics). Model 1 establishes the metric hierarchy; Model 2 adds a main effect of "
                 "Position; Model 3 adds the Metric × Position interaction.")
-    add_table(doc, S2_COLS, s2_rows, [1.70, 0.35, 0.75, 0.80, 0.80, 0.55, 0.45, 1.20])
+    add_table(doc, S2_COLS, s2_rows, [1.45, 0.30, 0.68, 0.62, 0.62, 0.48, 0.48, 0.48, 0.38, 1.10])
     # [REVIEW FIX 2026-10-16] footnote: LogLik/LRT are ML; variance components are REML.
     add_footnote(doc, "Abbreviations: k, number of fixed-effect parameters; LogLik, maximum "
                       "log-likelihood (ML fit); σ²Player and σ²Resid, between-player and residual "
-                      "variance components (REML fit); ICC = σ²Player / (σ²Player + σ²Resid); Δdf, "
+                      "variance components (REML fit); ICC = σ²Player / (σ²Player + σ²Resid); "
+                      "R²m and R²c, marginal (fixed effects) and conditional (fixed and random "
+                      "effects) R² (Nakagawa & Schielzeth, 2013; REML fit); Δdf, "
                       "change in fixed-effect degrees of freedom relative to the prior model; LRT, "
                       "likelihood-ratio test computed from maximum-likelihood (ML) fits, as REML "
                       "likelihoods are not comparable between models with different fixed effects.")

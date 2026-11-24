@@ -5,6 +5,11 @@ here, newest first. Each submitted version is tagged in git (`v1.0.0`, ...).
 
 ## Unreleased
 
+- Table S2 and the statistical output now report marginal and conditional R²
+  (Nakagawa & Schielzeth, 2013) per model (REML fits): metric alone explains
+  74.1% of the variance in CV% (R²m = 0.741), position adds 0.05% and the
+  metric × position interaction 1.8%; with the player random intercept,
+  R²c = 0.799–0.817. No other number changed.
 - Step 5 now also writes `results/manuscript/Statistical_output.txt` (and
   prints it): cohort, all descriptives, complete output of every mixed model,
   likelihood-ratio tests and all Tukey pairs, unrounded, with the optimizer used

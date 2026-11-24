@@ -264,6 +264,7 @@ M1 (REML)   formula: cv_percent ~ C(metric_raw)
 Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
 Log-likelihood: -8987.41
 Variance player (random intercept): 10.0026   Residual variance: 34.9596   ICC: 0.222467
+Marginal R2 (fixed effects): 0.741094   Conditional R2 (fixed + random): 0.798692
 Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -329,6 +330,7 @@ M2 (REML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
 Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
 Log-likelihood: -8982.62
 Variance player (random intercept): 10.0001   Residual variance: 34.9596   ICC: 0.222423
+Marginal R2 (fixed effects): 0.741592   Conditional R2 (fixed + random): 0.799068
 Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -402,6 +404,7 @@ M3 (REML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
 Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
 Log-likelihood: -8737.25
 Variance player (random intercept): 10.1604   Residual variance: 31.9444   ICC: 0.241311
+Marginal R2 (fixed effects): 0.759123   Conditional R2 (fixed + random): 0.817249
 Warnings during fitting: RuntimeWarning: divide by zero encountered in slogdet; RuntimeWarning: invalid value encountered in slogdet; RuntimeWarning: overflow encountered in slogdet; SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -619,6 +622,7 @@ M1 (ML)   formula: cv_percent ~ C(metric_raw)
 Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
 Log-likelihood: -8992.19   AIC: 18026.4   BIC: 18150.9
 Variance player (random intercept): 9.93408   Residual variance: 34.7201   ICC: 0.222467
+Marginal R2 (fixed effects): 0.742411   Conditional R2 (fixed + random): 0.799716
 Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -684,6 +688,7 @@ M2 (ML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
 Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
 Log-likelihood: -8990.13   AIC: 18030.3   BIC: 18178.5
 Variance player (random intercept): 9.60712   Residual variance: 34.7201   ICC: 0.216732
+Marginal R2 (fixed effects): 0.744297   Conditional R2 (fixed + random): 0.799716
 Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -757,6 +762,7 @@ M3 (ML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
 Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
 Log-likelihood: -8834.87   AIC: 17863.7   BIC: 18438.8
 Variance player (random intercept): 9.81095   Residual variance: 30.8506   ICC: 0.241283
+Marginal R2 (fixed effects): 0.765443   Conditional R2 (fixed + random): 0.822037
 Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
@@ -967,6 +973,16 @@ C(metric_raw)[T.peak_dec_ms2]:C(position_group_primary)[T.CF]                   
 C(metric_raw)[T.mean_sprint_dist_m]:C(position_group_primary)[T.CF]                    -2.64847 2.42411    -1.09255      0.27459  -7.39963    2.1027
 C(metric_raw)[T.mean_sprint_duration_s]:C(position_group_primary)[T.CF]                -2.78153 2.42411    -1.14744     0.251198   -7.5327   1.96964
 C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                         -1.80586 2.42411   -0.744959     0.456296  -6.55703    2.9453
+
+====================================================================================================
+3b. EXPLAINED VARIANCE (Nakagawa & Schielzeth 2013 R2, REML fits)
+====================================================================================================
+Marginal R2 = var(fixed predictions) / (var(fixed predictions) + var player + var residual);
+conditional R2 adds the player variance to the numerator. Delta = change vs the prior model.
+    model  marginal_R2  conditional_R2  delta_marginal_R2
+M1 (REML)     0.741094        0.798692                  -
+M2 (REML)     0.741592        0.799068         0.00049723
+M3 (REML)     0.759123        0.817249          0.0175315
 
 ====================================================================================================
 4. LIKELIHOOD-RATIO TESTS (ML fits)

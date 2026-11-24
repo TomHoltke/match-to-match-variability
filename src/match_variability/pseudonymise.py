@@ -2,6 +2,8 @@
 
 What changes (nothing else is touched, every metric value stays identical):
   - ``date``, ``match`` and ``full_name`` are removed;
+  - ``shirt_num`` and ``column_id`` (``home_<shirt>``) are removed: together with
+    the public fixture list, the shirt number would identify the player;
   - ``team_name`` is replaced by a neutral club code ``team_id`` (T01 to T18);
   - the data provider's ``player_id`` is replaced by a neutral code (P001 ...).
 
@@ -18,7 +20,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-DROP_COLUMNS = ["date", "match", "full_name"]
+DROP_COLUMNS = ["date", "match", "full_name", "shirt_num", "column_id"]
 
 
 def make_keys(identified: pd.DataFrame, seed: int | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:

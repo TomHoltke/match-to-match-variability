@@ -6,7 +6,8 @@ needed to reproduce the manuscript results.
 Reads  : IDENTIFIED_FEATURES_FILE, PLAYER_KEY_FILE, TEAM_KEY_FILE
 Writes : data/shared/match_player_features.csv   (the shared input of step 4)
 
-Removes date, match and player names and replaces player and club ids by
+Removes date, match, player names, shirt numbers and the tracking column id
+(home_<shirt>), and replaces player and club ids by
 neutral codes (see src/match_variability/pseudonymise.py). The existing key
 files are reused, so the shared table is reproduced exactly. New random keys
 are made only when no key files exist yet.

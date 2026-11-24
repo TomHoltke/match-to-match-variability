@@ -77,7 +77,8 @@ ranges are printed per match but do not remove any data.
 
 ## Step 3: pseudonymisation (`s03_pseudonymise.py`)
 
-Removes `date`, `match` and `full_name`, and replaces the data provider's
+Removes `date`, `match`, `full_name`, `shirt_num` and `column_id`
+(`home_<shirt>`), and replaces the data provider's
 player id and the club name by neutral codes (`P001` ..., `T01` ...). The codes
 were assigned once at random and stored in two private key files; step 3
 reuses them, so it rebuilds `data/shared/match_player_features.csv` exactly.

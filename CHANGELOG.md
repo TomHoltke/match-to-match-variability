@@ -5,6 +5,10 @@ here, newest first. Each submitted version is tagged in git (`v1.0.0`, ...).
 
 ## Unreleased
 
+- Shared data: `shirt_num` and `column_id` (`home_<shirt>`) removed from all
+  files in `data/shared/` (step 3), because with the public fixture list the
+  shirt number could identify players. Not used by the analysis; all tables
+  and the figure unchanged.
 - Repository restructured: installable package (`src/match_variability/`),
   numbered scripts per stage, shared data and tables as CSV, tests that check
   the reproduction, documentation of every column and of the tracking pipeline.

@@ -35,10 +35,8 @@ _META_COLS = [
     "team_id",
     "team_side",
     "player_id",
-    "shirt_num",
     "starter",
     "position_specific",
-    "column_id",
 ]
 
 # Per-event / peak magnitude metrics that are aggregated alongside the

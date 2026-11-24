@@ -14,10 +14,8 @@ One row per player per match (8,584 rows). Made by `s03_pseudonymise.py`.
 | `team_side` | `home` or `away` in that match |
 | `team_id` | club code, `T01` to `T18` (random) |
 | `player_id` | player code, `P001` to `P515` (random) |
-| `shirt_num` | shirt number in that match |
 | `starter` | `True` if the player started the match |
 | `position_specific` | detailed position from the starting formation (e.g. `Right Center Back`); `unknown` for substitutes |
-| `column_id` | the player's column in the tracking data (`home_<shirt>` / `away_<shirt>`) |
 | `playing_duration` | minutes with tracking data in the two halves, capped at 105 |
 
 ### Metrics
@@ -58,7 +56,7 @@ One row per eligible player (165; 148 without goalkeepers). Made by step 4.
 
 | Column | Meaning |
 |---|---|
-| `player_id`, `team_id`, `team_side`, `shirt_num`, `starter`, `column_id` | most frequent value over the player's eligible matches |
+| `player_id`, `team_id`, `team_side`, `starter` | most frequent value over the player's eligible matches |
 | `position_specific_primary` | most frequent detailed position |
 | `position_group_primary` | position group played in most eligible matches: GK, CB, FB, CM, AM, WM, WF, CF or Other (substitute appearances count as Other) |
 | `matches_played` | number of eligible matches |

@@ -148,8 +148,8 @@ ones (raw value and per-90 value). Every column is described in
 [`docs/data_dictionary.md`](docs/data_dictionary.md). The other three files in
 `data/shared/` are made from it by step 4 and are included for convenience.
 
-**Privacy.** The shared data contain no names, dates, fixtures, competition or
-season. Clubs and players appear only as neutral codes (`T01` to `T18`, `P001`
+**Privacy.** The shared data contain no names, dates, match names, shirt
+numbers, competition or season (matchday and home/away are kept). Clubs and players appear only as neutral codes (`T01` to `T18`, `P001`
 to `P515`) that were assigned at random. The key that links codes to real
 clubs and players is kept privately by the authors and is not part of this
 repository.
@@ -170,7 +170,7 @@ provider's terms.
 |---|---|---|
 | 1 | `s01_raw_to_saved_games.py` | load each match with [DataBallPy](https://github.com/Alek050/databallpy) 0.7.2; 1 Hz zero-lag 4th-order Butterworth filter on positions; speed and signed acceleration by central differences; playing position from the starting formation |
 | 2 | `s02_extract_match_features.py` | per player and match: playing time, distance per speed zone, change of direction, acceleration/deceleration and sprint metrics, per-90 values |
-| 3 | `s03_pseudonymise.py` | remove names, dates and fixtures; replace player and club ids by the random codes (exact rebuild of `match_player_features.csv`) |
+| 3 | `s03_pseudonymise.py` | remove names, dates, match names and shirt numbers; replace player and club ids by the random codes (exact rebuild of `match_player_features.csv`) |
 
 Details, thresholds and which matches were included: [`docs/tracking_pipeline.md`](docs/tracking_pipeline.md).
 These steps need the optional dependencies (`pip install -e ".[tracking]"` or

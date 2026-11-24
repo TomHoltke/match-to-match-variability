@@ -12,6 +12,7 @@ def identified():
         "MD": [1, 1, 2], "date": ["2000-01-01"] * 3, "match": ["A vs B"] * 3,
         "team_side": ["home", "away", "home"], "team_name": ["Club A", "Club B", "Club A"],
         "player_id": [111, 222, 111], "full_name": ["Name One", "Name Two", "Name One"],
+        "shirt_num": [7, 4, 7], "column_id": ["home_7", "away_4", "home_7"],
         "total_distance": [10000.5, 9000.25, 11000.0],
     })
 

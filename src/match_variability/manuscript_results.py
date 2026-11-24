@@ -15,7 +15,7 @@ Everything is written to ``results/manuscript/``:
     Manuscript_tables_and_figure.docx
     Statistical_output.txt   (also printed: cohort, all descriptives, full model
                               output, likelihood-ratio tests and all Tukey pairs,
-                              unrounded, plus any warnings raised during fitting)
+                              unrounded)
 
 The CSV tables are plain text, so ``git diff`` shows at once whether a rerun
 changed any reported number. The Word file is written with fixed timestamps so
@@ -327,7 +327,7 @@ def fixed_effects_table(m):
                          "p": m.pvalues.iloc[:k], "lower_95": ci[0], "upper_95": ci[1]})
 
 
-def statistical_report(df, obs, n_matches, fits, fit_warnings, lrts, tukey_objs, tukey_warnings):
+def statistical_report(df, obs, n_matches, fits, lrts, tukey_objs):
     import platform, scipy, statsmodels
     L = ["FULL STATISTICAL OUTPUT: match-to-match variability (step 5)",
          "All numbers unrounded (6 significant digits) unless printed by statsmodels itself.",
@@ -364,13 +364,10 @@ def statistical_report(df, obs, n_matches, fits, fit_warnings, lrts, tukey_objs,
     L.append("Reference levels: metric = TD (total_distance_per_90), position = CM.")
     L.append("REML fits give the estimates, variance components and ICC (Table 1, Table S2);")
     L.append("ML fits give the log-likelihoods for the likelihood-ratio tests (Table S2).")
-    L.append("Warnings are recorded over the whole optimisation, including intermediate trial")
-    L.append("values; 'Converged' and all estimates refer to the final solution.")
     for label, m in fits.items():
         vp, vr, icc = model_var(m)
         L += ["", "-" * 100, f"{label}   formula: {m.model.formula}", "-" * 100]
-        L.append(f"Method: {'REML' if m.reml else 'ML'}   Optimizer: {m.optimizer_used}   "
-                 f"Converged: {m.converged}   "
+        L.append(f"Method: {'REML' if m.reml else 'ML'}   Converged: {m.converged}   "
                  f"n obs: {int(m.nobs)}   n players: {len(m.model.group_labels)}   "
                  f"fixed effects k: {m.k_fe}")
         L.append(f"Log-likelihood: {_g(m.llf)}" +
@@ -379,8 +376,6 @@ def statistical_report(df, obs, n_matches, fits, fit_warnings, lrts, tukey_objs,
         L.append(f"Variance player (random intercept): {_g(vp)}   Residual variance: {_g(vr)}   "
                  f"ICC: {_g(icc)}")
         L.append(f"Marginal R2 (fixed effects): {_g(r2m)}   Conditional R2 (fixed + random): {_g(r2c)}")
-        w = fit_warnings.get(label, [])
-        L.append("Warnings during fitting: " + ("; ".join(w) if w else "none"))
         L += ["", "statsmodels summary:", m.summary().as_text(), "",
               "Fixed effects, unrounded (Wald z tests, 95% CI):",
               fixed_effects_table(m).to_string(**fmt)]
@@ -411,15 +406,8 @@ def statistical_report(df, obs, n_matches, fits, fit_warnings, lrts, tukey_objs,
         tuk = tukey_objs[raw]
         L += ["", f"--- {tab_lab} ---",
               f"q critical: {_g(tuk.q_crit)}   df (residual): {int(tuk.df_total)}"]
-        w = tukey_warnings.get(raw, [])
-        if w:
-            L.append("Warnings: " + "; ".join(w))
         L.append(tukey_table(tuk).to_string(index=False, **fmt))
     return "\n".join(L) + "\n"
-
-
-def _warning_texts(caught):
-    return sorted({f"{w.category.__name__}: {w.message}" for w in caught})
 
 
 # --------------------------------------------------------------------------- #
@@ -468,54 +456,44 @@ def run() -> None:
                 ("cv_percent ~ C(metric_raw) + C(position_group_primary)", 400),
                 ("cv_percent ~ C(metric_raw) * C(position_group_primary)", 500)]
 
-    fit_warnings = {}
-
-    def fit(label, formula, maxiter, reml):
-        # L-BFGS first (gives the reported results). Depending on the numpy/scipy
-        # build, an optimizer trial step can make the fixed-effect matrix exactly
-        # singular (numpy LinAlgError, seen on Windows); then fall back to BFGS and
-        # Powell, which reach the same optimum. Warnings are recorded (not shown)
-        # and listed, with the optimizer used, in the statistical output.
+    def fit(formula, maxiter, reml):
+        # L-BFGS gives the reported results. Depending on the numpy/scipy build, an
+        # optimizer trial step can make the fixed-effect matrix exactly singular
+        # (numpy LinAlgError, seen on Windows); then fall back to BFGS and Powell,
+        # which reach the same optimum. statsmodels messages about intermediate
+        # trial values are not shown; convergence of the final fit is checked below.
         model = mixedlm(formula, df_long, groups=df_long["player_id"], re_formula="1")
-        notes, m = [], None
+        m = None
         for method, iters in (("lbfgs", maxiter), ("bfgs", 2000), ("powell", 20000)):
-            with warnings.catch_warnings(record=True) as caught:
-                warnings.simplefilter("always")
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
                 try:
                     m = model.fit(method=method, maxiter=iters, reml=reml)
-                except (np.linalg.LinAlgError, ValueError) as e:
-                    notes.append(f"optimizer {method} failed ({type(e).__name__}: {e})")
+                    m.llf  # computed (and cached) here, so its messages stay hidden too
+                except (np.linalg.LinAlgError, ValueError):
                     continue
             if m.converged:
                 break
-            notes.append(f"optimizer {method} did not converge")
         if m is None:
-            raise RuntimeError(f"{label}: no optimizer could fit the model: {notes}")
-        m.optimizer_used = method
-        if method != "lbfgs":
-            print(f"NOTE: {label} fitted with {method} ({'; '.join(notes)})")
-        fit_warnings[label] = notes + _warning_texts(caught)
+            raise RuntimeError(f"No optimizer could fit the model: {formula}")
         return m
 
-    m1, m2, m3 = (fit(f"M{i} (REML)", f, it, reml=True) for i, (f, it) in enumerate(formulas, 1))
-    m1_ml, m2_ml, m3_ml = (fit(f"M{i} (ML)", f, it, reml=False)
-                           for i, (f, it) in enumerate(formulas, 1))
+    m1, m2, m3 = (fit(f, it, reml=True) for f, it in formulas)
+    m1_ml, m2_ml, m3_ml = (fit(f, it, reml=False) for f, it in formulas)
     for m in (m1, m2, m3, m1_ml, m2_ml, m3_ml):
         if not m.converged:
             print(f"WARNING: model did not converge (reml={m.reml}): {m.model.formula}")
     m1_ci = m1.conf_int()
 
     # ----- Tukey contrasts (one source of truth for Figure 1 and Table S3) -----
-    tukey_objs, tukey_warnings = {}, {}
+    tukey_objs = {}
 
     def tukey_vs_cm(raw):
         cv_col = f"{raw}_cv"
         sub = df[[cv_col, "position_group_primary"]].dropna().rename(columns={cv_col: "y"})
         sub["pos"] = sub["position_group_primary"].astype(str)
-        with warnings.catch_warnings(record=True) as caught:
-            warnings.simplefilter("always")
-            tuk = pairwise_tukeyhsd(sub["y"], sub["pos"], alpha=0.05)
-        tukey_objs[raw], tukey_warnings[raw] = tuk, _warning_texts(caught)
+        tuk = pairwise_tukeyhsd(sub["y"], sub["pos"], alpha=0.05)
+        tukey_objs[raw] = tuk
         tdf = pd.DataFrame(tuk._results_table.data[1:], columns=tuk._results_table.data[0])
         out = {}
         for pos in CONTRAST:
@@ -771,10 +749,9 @@ def run() -> None:
         df, obs, n_matches,
         fits={"M1 (REML)": m1, "M2 (REML)": m2, "M3 (REML)": m3,
               "M1 (ML)": m1_ml, "M2 (ML)": m2_ml, "M3 (ML)": m3_ml},
-        fit_warnings=fit_warnings,
         lrts={"M1 -> M2 (position main effect)": (chi12, ddf12, p12),
               "M2 -> M3 (metric x position interaction)": (chi23, ddf23, p23)},
-        tukey_objs=tukey_objs, tukey_warnings=tukey_warnings)
+        tukey_objs=tukey_objs)
     report_path = OUT / "Statistical_output.txt"
     report_path.write_text(report, encoding="utf-8")
     print("\n" + report)

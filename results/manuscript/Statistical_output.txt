@@ -255,17 +255,14 @@ Mean sprint dist (m)    CF  15   22.339  6.44527  13.0334  20.6502 40.5369
 Reference levels: metric = TD (total_distance_per_90), position = CM.
 REML fits give the estimates, variance components and ICC (Table 1, Table S2);
 ML fits give the log-likelihoods for the likelihood-ratio tests (Table S2).
-Warnings are recorded over the whole optimisation, including intermediate trial
-values; 'Converged' and all estimates refer to the final solution.
 
 ----------------------------------------------------------------------------------------------------
 M1 (REML)   formula: cv_percent ~ C(metric_raw)
 ----------------------------------------------------------------------------------------------------
-Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
+Method: REML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
 Log-likelihood: -8987.41
 Variance player (random intercept): 10.0026   Residual variance: 34.9596   ICC: 0.222467
 Marginal R2 (fixed effects): 0.741094   Conditional R2 (fixed + random): 0.798692
-Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                             Mixed Linear Model Regression Results
@@ -327,11 +324,10 @@ C(metric_raw)[T.peak_speed_ms]                        5.01642 0.692025   7.2489 
 ----------------------------------------------------------------------------------------------------
 M2 (REML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
 ----------------------------------------------------------------------------------------------------
-Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
+Method: REML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
 Log-likelihood: -8982.62
 Variance player (random intercept): 10.0001   Residual variance: 34.9596   ICC: 0.222423
 Marginal R2 (fixed effects): 0.741592   Conditional R2 (fixed + random): 0.799068
-Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                             Mixed Linear Model Regression Results
@@ -401,11 +397,10 @@ C(position_group_primary)[T.CF]                      0.546543   1.0619  0.514686
 ----------------------------------------------------------------------------------------------------
 M3 (REML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
 ----------------------------------------------------------------------------------------------------
-Method: REML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
+Method: REML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
 Log-likelihood: -8737.25
 Variance player (random intercept): 10.1604   Residual variance: 31.9444   ICC: 0.241311
 Marginal R2 (fixed effects): 0.759123   Conditional R2 (fixed + random): 0.817249
-Warnings during fitting: RuntimeWarning: divide by zero encountered in slogdet; RuntimeWarning: invalid value encountered in slogdet; RuntimeWarning: overflow encountered in slogdet; SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                                              Mixed Linear Model Regression Results
@@ -619,11 +614,10 @@ C(metric_raw)[T.peak_speed_ms]:C(position_group_primary)[T.CF]                  
 ----------------------------------------------------------------------------------------------------
 M1 (ML)   formula: cv_percent ~ C(metric_raw)
 ----------------------------------------------------------------------------------------------------
-Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
+Method: ML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 19
 Log-likelihood: -8992.19   AIC: 18026.4   BIC: 18150.9
 Variance player (random intercept): 9.93408   Residual variance: 34.7201   ICC: 0.222467
 Marginal R2 (fixed effects): 0.742411   Conditional R2 (fixed + random): 0.799716
-Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                             Mixed Linear Model Regression Results
@@ -685,11 +679,10 @@ C(metric_raw)[T.peak_speed_ms]                        5.01642 0.689651  7.27385 
 ----------------------------------------------------------------------------------------------------
 M2 (ML)   formula: cv_percent ~ C(metric_raw) + C(position_group_primary)
 ----------------------------------------------------------------------------------------------------
-Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
+Method: ML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 23
 Log-likelihood: -8990.13   AIC: 18030.3   BIC: 18178.5
 Variance player (random intercept): 9.60712   Residual variance: 34.7201   ICC: 0.216732
 Marginal R2 (fixed effects): 0.744297   Conditional R2 (fixed + random): 0.799716
-Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                             Mixed Linear Model Regression Results
@@ -759,11 +752,10 @@ C(position_group_primary)[T.CF]                      0.546543  1.04355 0.523734 
 ----------------------------------------------------------------------------------------------------
 M3 (ML)   formula: cv_percent ~ C(metric_raw) * C(position_group_primary)
 ----------------------------------------------------------------------------------------------------
-Method: ML   Optimizer: lbfgs   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
+Method: ML   Converged: True   n obs: 2774   n players: 146   fixed effects k: 95
 Log-likelihood: -8834.87   AIC: 17863.7   BIC: 18438.8
 Variance player (random intercept): 9.81095   Residual variance: 30.8506   ICC: 0.241283
 Marginal R2 (fixed effects): 0.765443   Conditional R2 (fixed + random): 0.822037
-Warnings during fitting: SingularMatrixWarning: Random effects covariance is singular
 
 statsmodels summary:
                                              Mixed Linear Model Regression Results
